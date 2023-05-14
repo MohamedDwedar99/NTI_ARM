@@ -1,0 +1,66 @@
+/*
+ * NVIC_private.h
+ *
+ *  Created on: May 12, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef NVIC_PRIVATE_H_
+#define NVIC_PRIVATE_H_
+
+
+#define			NVIC_BASE_ADD			(0xE000E100)
+
+typedef struct {
+	u32 ISER0;
+	u32 ISER1;
+	u32 ISER2;
+	u32 reserved1[30];
+	u32 ICER0;
+	u32 ICER1;
+	u32 ICER2;
+	u32 reserved2[30];
+	u32 ISPR0;
+	u32 ISPR1;
+	u32 ISPR2;
+	u32 reserved3[30];
+	u32 ICPR0;
+	u32 ICPR1;
+	u32 ICPR2;
+	u32 reserved4[30];
+	u32 IABR0;
+	u32 IABR1;
+	u32 IABR2;
+	u32 reserved5[30];
+	u32 ICPR0;
+	u32 ICPR1;
+	u32 ICPR2;
+	u32 reserved6[62];
+	u32 IPR0;
+	u32 IPR1;
+	u32 IPR2;
+	u32 IPR3;
+	u32 IPR4;
+	u32 IPR5;
+	u32 IPR6;
+	u32 IPR7;
+	u32 IPR8;
+	u32 IPR9;
+	u32 IPR10;
+	u32 IPR11;
+	u32 IPR12;
+	u32 IPR13;
+	u32 IPR14;
+	u32 IPR15;
+	u32 IPR16;
+	u32 IPR17;
+	u32 IPR18;
+	u32 IPR19;
+	u32 IPR20;
+	u32 reserved6[696];
+	u32 STIR;
+}NCIV_type;
+
+
+#define NVIC                ((volatile  NVIC_type *)(NVIC_BASE_ADD))
+#endif /* 01MCAL_02NVIC_NVIC_PRIVATE_H_ */

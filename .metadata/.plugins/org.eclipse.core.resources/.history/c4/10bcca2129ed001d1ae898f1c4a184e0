@@ -1,0 +1,46 @@
+#include	"Std_Types.h"
+#include	"Bit_Math.h"
+
+#include	"RCC_interface.h"
+#include	"DIO_interface.h"
+
+#include	"NVIC_interface.h"
+#include    "EXTI_interface.h"
+
+
+
+
+
+int main(void)
+{
+	/*	System Clock Init			*/
+	RCC_voidSysClkInt();
+
+	/*	Enable RCC for GPIOC 		*/
+	RCC_voidEnablePerClk(RCC_APB2,2);
+	RCC_voidEnablePerClk(RCC_APB2,0);
+
+	/*	C13 Direction 	"Output @ 2MHz Push Pull"	*/
+	DIO_voidSetPinDirection(PORTA,PIN0,GPIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinValue(PORTA, PIN0, GPIO_HIGH);
+	DIO_voidSetPinDirection(PORTA,PIN5,GPIO_OUTPUT_10MHZ_PP);
+	DIO_voidSetPinValue(PORTA, PIN0, GPIO_LOW);
+	EXTI_voidChangeSenseMode(PORTA, RISING_EDGE);
+
+	/*	Interrupt Initialization	*/
+	NVIC_voidInit();
+	NVIC_voidEnablePerInt(6);
+	EXTI0_voidInit();
+	EXTI_voidEnableInt(PORTA);
+
+	while (1)
+	{
+
+	}
+}
+
+
+void INTTT(void)
+{
+	DIO_voidSetPinValue(PORTA, PIN5, GPIO_HIGH);
+}

@@ -1,0 +1,26 @@
+/*
+ * GPIO_private.h
+ *
+ *  Created on: May 11, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef GPIO_PRIVATE_H_
+#define GPIO_PRIVATE_H_
+
+typedef struct {
+	u32 CRL;
+	u32 CRH;
+	u32 IDR;
+	u32 ODR;
+	u32 BSSR;
+	u32 BRR;
+	u32 LCKR;
+}GPIO_type;
+
+#define GPIOA        ((volatile GPIO_type *)(0x40010800))
+#define GPIOB        ((volatile GPIO_type *)(0x40011000))
+#define GPIOC        ((volatile GPIO_type *)(0x40010800))
+
+
+#endif /* 01MCAL_01GPIO_GPIO_PRIVATE_H_ */

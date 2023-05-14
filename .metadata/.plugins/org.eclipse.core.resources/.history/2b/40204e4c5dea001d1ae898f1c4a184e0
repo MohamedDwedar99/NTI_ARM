@@ -1,0 +1,16 @@
+/*
+ * Delay_program.c
+ *
+ *  Created on: May 4, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+
+void	_delay_ms(u32 ticks)
+{
+	u32 i;
+	for( i = 0; i < (ticks * 500) ; i++)
+	{
+		asm("NOP");
+	}
+}

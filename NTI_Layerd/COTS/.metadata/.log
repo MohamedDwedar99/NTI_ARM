@@ -1,0 +1,107 @@
+!SESSION 2023-05-02 04:49:03.043 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-02 04:49:40.241
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-02 04:49:40.258
+!MESSAGE Log4j2 initialized with config file E:\NTI\COTS\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-02 04:49:49.180
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.engine 4 0 2023-05-02 04:50:11.409
+!MESSAGE Error parsing profile C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\p2\org.eclipse.equinox.p2.engine\profileRegistry\STM32CubeIDE.profile\1682896716268.profile.gz.
+!STACK 0
+java.io.IOException: Premature end of file.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:756)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:742)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:550)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:380)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:263)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:192)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$1.run(AutomaticUpdateScheduler.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 22087; columnNumber: 13; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1243)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:753)
+	... 7 more
+
+!ENTRY org.eclipse.equinox.p2.engine 4 0 2023-05-02 04:50:11.857
+!MESSAGE Error parsing profile C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\p2\org.eclipse.equinox.p2.engine\profileRegistry\STM32CubeIDE.profile\1682896716268.profile.gz.
+!STACK 0
+java.io.IOException: Premature end of file.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:756)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:742)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:222)
+	at org.eclipse.equinox.internal.p2.engine.SurrogateProfileHandler.getSharedProfile(SurrogateProfileHandler.java:172)
+	at org.eclipse.equinox.internal.p2.engine.SurrogateProfileHandler.createProfile(SurrogateProfileHandler.java:216)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.createSurrogateProfile(SimpleProfileRegistry.java:351)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:272)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:192)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$1.run(AutomaticUpdateScheduler.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 22087; columnNumber: 13; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1243)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:753)
+	... 9 more
+
+!ENTRY org.eclipse.equinox.p2.engine 4 0 2023-05-02 04:50:12.122
+!MESSAGE Error parsing profile C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\p2\org.eclipse.equinox.p2.engine\profileRegistry\STM32CubeIDE.profile\1682896716268.profile.gz.
+!STACK 0
+java.io.IOException: Premature end of file.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:756)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:742)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:222)
+	at org.eclipse.equinox.internal.p2.engine.SurrogateProfileHandler.getSharedProfile(SurrogateProfileHandler.java:172)
+	at org.eclipse.equinox.internal.p2.engine.SurrogateProfileHandler.createProfile(SurrogateProfileHandler.java:216)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.createSurrogateProfile(SimpleProfileRegistry.java:351)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:272)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:192)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.containsProfile(SimpleProfileRegistry.java:930)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.containsProfile(ProfilePreferences.java:115)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.load(ProfilePreferences.java:260)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:370)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:624)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:767)
+	at org.eclipse.equinox.p2.engine.ProfileScope.getNode(ProfileScope.java:77)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getStorePreferences(ScopedPreferenceStore.java:213)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.<init>(ScopedPreferenceStore.java:127)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdatePlugin.getPreferenceStore(AutomaticUpdatePlugin.java:139)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.removeUnusedPlugins(AutomaticUpdateScheduler.java:109)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$1.run(AutomaticUpdateScheduler.java:80)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 22087; columnNumber: 13; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1243)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:753)
+	... 20 more
+
+!ENTRY org.eclipse.equinox.p2.engine 4 0 2023-05-02 04:50:12.410
+!MESSAGE Error parsing profile C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\p2\org.eclipse.equinox.p2.engine\profileRegistry\STM32CubeIDE.profile\1682896716268.profile.gz.
+!STACK 0
+java.io.IOException: Premature end of file.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:756)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:742)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:222)
+	at org.eclipse.equinox.internal.p2.engine.SurrogateProfileHandler.getSharedProfile(SurrogateProfileHandler.java:172)
+	at org.eclipse.equinox.internal.p2.engine.SurrogateProfileHandler.createProfile(SurrogateProfileHandler.java:216)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.createSurrogateProfile(SimpleProfileRegistry.java:351)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:272)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:192)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:125)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 22087; columnNumber: 13; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1243)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:753)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-02 04:55:30.500
+!MESSAGE Indexed 'NTI_' (17 sources, 78 headers) in 8.91 sec: 3,642 declarations; 13,168 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)

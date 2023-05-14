@@ -1,0 +1,3 @@
+2023-05-03 19:04:35,284 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_External_tool_project_builders_migration_2 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2023-05-03 19:04:35,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_Prompt_before_migrating_3 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2023-05-03 19:04:35,744 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_1 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages

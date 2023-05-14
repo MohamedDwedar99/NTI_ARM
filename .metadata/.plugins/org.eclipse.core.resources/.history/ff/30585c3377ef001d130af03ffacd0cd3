@@ -1,0 +1,16 @@
+#ifndef		BIT_MATH_H
+#define		BIT_MATH_H
+
+
+/*ADD 1 to selected BIT*/
+#define		SET_BIT(REG,BIT)		(REG |=  (1<<BIT))
+/*ADD 0 to selected BIT (CLEAR BIT)*/
+#define		CLR_BIT(REG,BIT)		(REG &= ~(1<<BIT))
+/*Change The bit from 0 to 1 and vice versa*/
+#define		TOG_BIT(REG,BIT)		(REG ^=  (1<<BIT))
+/*return the bit value*/
+#define		GET_BIT(REG,BIT)		((REG>>BIT)&0x01)
+
+//#define		BIT_LOW					((u8)0)
+
+#endif

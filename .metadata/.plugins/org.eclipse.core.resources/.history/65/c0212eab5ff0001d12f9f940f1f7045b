@@ -1,0 +1,50 @@
+/*
+ * KEYPAD_interface.c
+ *
+ *  Created on: May 7, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+
+#include "Bit_Math.h"
+#include "Std_Types.h"
+#include "GPIO_interface.h"
+#include "Delay_interface.h"
+#include "KEYPAD_config.h"
+
+
+
+u8 KEY_GIT[4][4] = {{'0', '1', '2', '3'},
+		            {'4', '5', '6', '7'},
+		            {'8' , '9', '10','11'},
+		            {'12','13','14','15'}};
+
+void KEYPAD_voidInit(void)
+{
+	for (u8 PIN_I = KETPAD_start; PIN_I < 4; PIN_I++)
+	{
+		GPIO_voidSetPinDirection(KEYPAD_PORT, PIN_I, GPIO_OUTPUT_10MHZ_PP);
+	}
+	DIO_voidSetPortDirection(KEYPAD_PORT,0x0F);
+	DIO_voidSetPortValue(KEYPAD_PORT,0xFF);
+}
+
+
+u8 KEYPAD_u8Read(void)
+{
+	u8 data = 0;
+	for (u8 i = 0;i < 4;i++)
+	{
+		DIO_voidSetPinValue(KEYPAD_PORT,i,PIN_LOW);
+		for (u8 j = 0;j < 4;j++)
+		{
+			if (!GET_BIT(PIND_Register,j+4))
+			{
+				data = KEY_GIT[i][j];
+			}
+		}
+		DIO_voidSetPinValue(KEYPAD_PORT,i,PIN_HIGH);
+	}
+	_delay_ms(200);
+	return data;
+}

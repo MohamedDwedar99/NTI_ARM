@@ -1,0 +1,4 @@
+LCD_program.c:29:6:LCD_void_8bitSendCommand	1
+LCD_program.c:40:6:LCD_void_8bitInit	2
+LCD_program.c:60:6:LCD_void_8bitSendChar	1
+LCD_program.c:71:6:LCD_void_8bitSendString	2

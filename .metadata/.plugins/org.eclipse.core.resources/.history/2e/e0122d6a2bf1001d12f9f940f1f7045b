@@ -1,0 +1,76 @@
+#include "Std_Types.h"
+#include "Bit_Math.h"
+#include "DIO_interface.h"
+#include "DMA_private.h"
+#include "DMA_interface.h"
+
+
+
+
+
+void	DMA1_voidChannelInit(u8 Channel_copy,u8 source,u8 sink,u8 priority)
+{
+
+//	Memory to Memory
+
+//	priority very high
+//	Size (Source & Destination) u32
+//	MINC, PINC enabled
+//	Direction read from Peripheral
+//	Transfere Complete Interrupt
+//	Channel Disable
+
+	//DMA1 ->	Channel[0].CCR = 0x00007AC2;
+	switch (source)
+	{
+	case DMA_Memory:
+		if (sink == DMA_Memory)
+		{
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << EN; // m to m
+		    DMA1 -> Channel[Channel_copy].CCR |= DMA_VERYHIGH << PL;
+		    DMA1 -> Channel[Channel_copy].CCR |= SIZE_32BIT   << MSIZE;
+		    DMA1 -> Channel[Channel_copy].CCR |= SIZE_32BIT   << PSIZE;
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << MINC;
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << PINC;
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << DIR;
+		}
+		else if (sink == DMA_Peripheral)
+		{
+
+		}
+		break;
+	case DMA_Peripheral:
+		if (sink == DMA_Memory)
+		{
+
+		}
+		else if (sink == DMA_Peripheral)
+		{
+
+		}
+		break;
+	}
+}
+
+void	DMA1_voidStartChannel(u32 * SrcAdd,u32 * DestAdd,u16 BlockLength)
+{
+	/*		Make Sure that the channel is  disabled */
+	CLR_BIT(DMA1 -> Channel[0].CCR,0);
+	
+	DMA1 -> Channel[0].CPAR	=	SrcAdd;
+	DMA1 -> Channel[0].CMAR	=	DestAdd;
+	
+	/*	Load the Block Length				*/
+	DMA1 -> Channel[0].CNDTR	=	BlockLength;
+
+	/*		Make Sure that the channel is  Enabled to strat transfere*/
+	SET_BIT(DMA1 -> Channel[0].CCR,0);	
+}
+
+
+
+
+
+
+
+

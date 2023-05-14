@@ -1,0 +1,164 @@
+/*
+ * GPIO_program.c
+ *
+ *  Created on: May 11, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+
+#include "GPIO_interface.h"
+#include "GPIO_private.h"
+
+
+void GPIP_voidSetPinDirection(u8 PORT,u8 PIN,u8 DIRECTION)
+{
+	if (PORT < 3 && PIN < 16)
+	{
+		if (PIN < 8)
+		{
+			switch(PORT)
+			{
+			case PORTA:
+				// Clear the 4 bits
+				GPIOA -> CRL &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOA -> CRL &= ((DIRECTION)<<(PIN * 4));
+				break;
+			case PORTB:
+				// Clear the 4 bits
+				GPIOB -> CRL &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRL &= ((DIRECTION)<<(PIN * 4));
+				break;
+			case PORTC:
+				// Clear the 4 bits
+				GPIOB -> CRL &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRL &= ((DIRECTION)<<(PIN * 4));
+				break;
+			}
+		}
+		else
+		{
+			PIN -= 8;
+			switch(PORT)
+			{
+			case PORTA:
+				// Clear the 4 bits
+				GPIOA -> CRH &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOA -> CRH &= ((DIRECTION)<<(PIN * 4));
+				break;
+			case PORTB:
+				// Clear the 4 bits
+				GPIOB -> CRH &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRH &= ((DIRECTION)<<(PIN * 4));
+				break;
+			case PORTC:
+				// Clear the 4 bits
+				GPIOB -> CRH &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRH &= ((DIRECTION)<<(PIN * 4));
+				break;
+			}
+		}
+	}
+	else
+	{
+		//Error
+	}
+}
+void GPIP_voidSetPinValue(u8 PORT,u8 PIN ,u8 VALUE)
+{
+	if (PORT < 3 && PIN < 16)
+	{
+		if (VALUE == GPIO_HIGH)
+		{
+			switch (PORT)
+			{
+			case PORTA:
+				SET_BIT(GPIOA -> BSRR,PIN);
+				break;
+			case PORTB:
+				SET_BIT(GPIOA -> BSRR,PIN);
+				break;
+			case PORTC:
+				SET_BIT(GPIOA -> BSRR,PIN);
+				break;
+			}
+		}
+		else if (VALUE == GPIO_LOW)
+		{
+			switch (PORT)
+			{
+			case PORTA:
+				SET_BIT(GPIOA -> BRR,PIN);
+				break;
+			case PORTB:
+				SET_BIT(GPIOA -> BRR,PIN);
+				break;
+			case PORTC:
+				SET_BIT(GPIOA -> BRR,PIN);
+				break;
+			}
+		}
+	}
+}
+u8  GPIP_voidGetPinValue(u8 PORT,u8 PIN)
+{
+	u8 VAL = 99;
+	if (PORT <=  PORTC && PIN <= PIN15)
+	{
+		switch (PORT)
+		{
+		case PORTA: VAL = GET_BIT(GPIOA -> IDR,PIN);break;
+		case PORTB: VAL = GET_BIT(GPIOB -> IDR,PIN);break;
+		case PORTC: VAL = GET_BIT(GPIOC -> IDR,PIN);break;
+		}
+	}
+	else
+	{
+		// Wrong Choice
+	}
+	return VAL;
+}
+
+void GPIO_voidTogPinValue(u8 port, u8 pin)
+{
+	if(port < 3 && pin < 16)
+	{
+		switch(port)
+		{
+		case	PORTA	:	TOG_BIT(GPIOA -> ODR,pin);	break;
+		case	PORTB	:	TOG_BIT(GPIOB -> ODR,pin);	break;
+		case	PORTC	:	TOG_BIT(GPIOC -> ODR,pin);	break;
+		}
+	}
+}
+
+
+
+void DIO_voidWriteValue(u8 port,u8 startpin,u8 data)
+{
+	u32 data32 =  ~0 & ((u32)data << startpin);
+	if(port < 3 && startpin < 16)
+	{
+		switch(port)
+		{
+			case	PORTA	:
+				GPIOA_ODR |= data32;
+				break;
+			case	PORTB	:
+				GPIOB_ODR |= data32;
+				break;
+			case	PORTC	:
+				GPIOC_ODR |= data32;
+				break;
+		}
+
+	}else{/*	Return Error	*/}
+}

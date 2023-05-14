@@ -1,0 +1,3 @@
+../COTS/02 ECU/BUZZER/BUZZER_program.c:16:6:BUZZER_voidInit	16	static
+../COTS/02 ECU/BUZZER/BUZZER_program.c:20:6:BUZZER_voidON	16	static
+../COTS/02 ECU/BUZZER/BUZZER_program.c:24:6:BUZZER_voidOFF	16	static

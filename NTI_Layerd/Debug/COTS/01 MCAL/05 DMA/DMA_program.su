@@ -1,0 +1,2 @@
+../COTS/01 MCAL/05 DMA/DMA_program.c:11:6:DMA1_voidChannelInit	16	static
+../COTS/01 MCAL/05 DMA/DMA_program.c:57:6:DMA1_voidStartChannel	24	static

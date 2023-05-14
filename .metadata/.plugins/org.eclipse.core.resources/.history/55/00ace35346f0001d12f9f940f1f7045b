@@ -1,0 +1,26 @@
+/*
+ *
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+#include "GPIO_interface.h"
+
+
+int main(void)
+{
+    RCC_voidSysClkInt();
+    RCC_voidEnablePerClk(RCC_APB2,RCC_IOPA);
+    GPIO_voidSetPinDirection(PORTA, PIN0, GPIO_INPUT_ANALOG);
+
+    asm("NOP");
+	while(1)
+	{
+		for (int i = 0; i < 1000; i++)
+		{
+			asm("NOP");
+		}
+	}
+	return 0;
+}

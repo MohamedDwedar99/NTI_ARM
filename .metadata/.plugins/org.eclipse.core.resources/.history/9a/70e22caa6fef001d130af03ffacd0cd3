@@ -1,0 +1,64 @@
+#include	"Std_Types.h"
+#include	"Bit_Math.h"
+
+#include	"RCC_interface.h"
+#include	"DIO_interface.h"
+
+#include	"NVIC_interface.h"
+#include    "EXTI_interface.h"
+
+
+
+
+void	LED(void);
+void _delay_ms(u32 Tick);
+
+
+int main(void)
+{
+
+	while (1)
+	{
+
+	}
+}
+
+
+//void	EXTI0_IRQHandler(void)
+//{
+//	//EXTI0_CallBack();
+//	/*		Led On		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_HIGH);
+//			_delay_ms(1000);
+//			/*		Led Off		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_LOW);
+//			_delay_ms(1000);
+//	/*	Clear EXTI0 Flag	*/
+//	//SET_BIT(EXTI -> PR,0);
+//}
+
+
+
+void	LED(void)
+{
+	/*		Led On		*/
+			DIO_voidSetPinValue(PORTA,PIN1,GPIO_HIGH);
+			_delay_ms(1000);
+			/*		Led Off		*/
+			DIO_voidSetPinValue(PORTA,PIN1,GPIO_LOW);
+			_delay_ms(1000);
+	/*	Clear EXTI0 Flag	*/
+
+
+}
+
+
+
+
+void _delay_ms(u32 Tick)
+{
+	for(u32 i=0 ; i<500*Tick ;i++)
+	{
+		asm("NOP");
+	}
+}

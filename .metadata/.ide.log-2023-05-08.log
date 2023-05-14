@@ -1,0 +1,45 @@
+2023-05-08 03:14:32,382 [INFO] MainUpdater:2854 - connection check result : 10
+2023-05-08 03:14:32,642 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-05-08 03:14:32,645 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-05-08 03:14:32,647 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-05-08 03:14:33,802 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-05-08 03:14:33,803 [INFO] DetailPanel:341 - Set advertising image to C:/Users/es-MohamedHAbdelAziz/STM32Cube/Repository/\en.prom-stm32h5-mcu-finder.jpg
+2023-05-08 03:15:18,891 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-05-08 03:15:18,892 [INFO] ApiDb:448 - Save user favorites file C:\Users\es-MohamedHAbdelAziz/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2023-05-08 03:15:18,893 [INFO] ApiDb:452 - User favorites MCUs=[STM32F103C6T6A]
+2023-05-08 03:27:18,842 [INFO] MainUpdater:2854 - connection check result : 10
+2023-05-08 03:27:19,005 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-05-08 03:27:19,006 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-05-08 03:27:19,007 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-05-08 03:27:20,320 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-05-08 03:27:20,320 [INFO] DetailPanel:341 - Set advertising image to C:/Users/es-MohamedHAbdelAziz/STM32Cube/Repository/\en.prom-stm32h5-mcu-finder.jpg
+2023-05-08 03:27:28,895 [INFO] MainUpdater:2854 - connection check result : 10
+2023-05-08 03:27:29,066 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-05-08 03:27:29,075 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-05-08 03:27:29,075 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-05-08 03:27:30,188 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-05-08 03:27:30,188 [INFO] DetailPanel:341 - Set advertising image to C:/Users/es-MohamedHAbdelAziz/STM32Cube/Repository/\en.prom-stm32h5-mcu-finder.jpg
+2023-05-08 03:28:07,800 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-05-08 03:28:07,801 [INFO] ApiDb:448 - Save user favorites file C:\Users\es-MohamedHAbdelAziz/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2023-05-08 03:28:07,802 [INFO] ApiDb:452 - User favorites MCUs=[STM32F103C6T6A]
+2023-05-08 16:29:41,678 [INFO] Activator:176 - 
+
+
+2023-05-08 16:29:41,683 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-08 16:29:56,182 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-08 16:30:20,755 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-08 16:30:20,756 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-08 16:30:21,189 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-08 16:30:21,190 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-08 16:30:21,552 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-08 16:30:21,553 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-08 16:30:22,003 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-08 16:30:22,004 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-08 20:47:07,378 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_External_tool_project_builders_migration_2 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2023-05-08 20:47:07,390 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_Prompt_before_migrating_3 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2023-05-08 20:47:07,397 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Warning: NLS missing message: ExternalToolsPreferencePage_1 in: org.eclipse.ui.externaltools.internal.ui.ExternalToolsUIMessages
+2023-05-08 20:48:00,746 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.853491223.995938048.1700321764 uses a null category that is invalid in its context. The option was ignored.
+2023-05-08 20:48:00,755 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1444748850.1586882741.408684762 uses a null category that is invalid in its context. The option was ignored.
+2023-05-08 20:48:00,766 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.2010361319.870532694.1084234655 uses a null category that is invalid in its context. The option was ignored.
+2023-05-08 20:48:00,775 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1713242018.1584500258.1040796155 uses a null category that is invalid in its context. The option was ignored.
+2023-05-08 20:48:00,785 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.507516088.393413568.2115228354 uses a null category that is invalid in its context. The option was ignored.

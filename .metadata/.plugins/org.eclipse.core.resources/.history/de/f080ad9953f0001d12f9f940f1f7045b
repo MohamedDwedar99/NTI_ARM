@@ -1,0 +1,76 @@
+/*
+ * LCD_program.c
+ *
+ *  Created on: May 4, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "GPIO_interface.h"
+
+#include "LCD_private.h"
+#include "LCD_interface.h"
+#include "LCD_config.h"
+
+#include ""
+
+#define DDRAM 0
+#define CGRAM 1
+
+#define Disable 0
+#define Enable  1
+
+#define WRITE    0
+#define READ     1
+
+
+void LCD_void_8bitSendCommand(u8 Commmand_copy)
+{
+
+	DIO_voidSetPortValue(DATA_PORT,Commmand_copy);
+	DIO_voidSetPinValue(CONTROL_PORT,RS_PIN,0);
+	DIO_voidSetPinValue(CONTROL_PORT,RW_PIN,0);
+	DIO_voidSetPinValue(CONTROL_PORT,E_PIN,1);
+	_delay_ms(1);
+	DIO_voidSetPinValue(CONTROL_PORT,E_PIN,0);
+	_delay_ms(3);
+}
+void LCD_void_8bitInit(void)
+{
+	DIO_voidSetPortDirection(DATA_PORT,PORT_OUTPUT);
+	DIO_voidSetPinDirection(CONTROL_PORT,RS_PIN,PIN_OUTPUT);
+	DIO_voidSetPinDirection(CONTROL_PORT,RW_PIN,PIN_OUTPUT);
+	DIO_voidSetPinDirection(CONTROL_PORT,E_PIN,PIN_OUTPUT);
+	_delay_ms(20);
+
+	LCD_void_8bitSendCommand(MODE);
+	LCD_void_8bitSendCommand(DISPLAY);
+	LCD_void_8bitSendCommand(WRITE_DIR);
+	LCD_void_8bitSendCommand(LCD_RETURN);
+	LCD_void_8bitSendCommand(LCD_CLR);
+
+}
+
+
+void LCD_void_8bitSendChar(u8 data)
+{
+	DIO_voidSetPortValue(DATA_PORT,data);
+	DIO_voidSetPinValue(CONTROL_PORT,RS_PIN,1);
+	DIO_voidSetPinValue(CONTROL_PORT,RW_PIN,0);
+	DIO_voidSetPinValue(CONTROL_PORT,E_PIN,1);
+	_delay_ms(1);
+	DIO_voidSetPinValue(CONTROL_PORT,E_PIN,0);
+	_delay_ms(3);
+}
+
+void LCD_void_8bitSendString(const u8 data[])
+{
+	int i = 0;
+	while (data[i] != '\0')
+	{
+		LCD_void_8bitSendChar(data[i]);
+		i++;
+	}
+}

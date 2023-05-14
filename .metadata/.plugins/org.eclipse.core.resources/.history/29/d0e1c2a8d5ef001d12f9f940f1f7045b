@@ -1,0 +1,126 @@
+#include	"Std_Types.h"
+#include	"Bit_Math.h"
+
+#include	"RCC_interface.h"
+#include	"DIO_interface.h"
+
+#include	"NVIC_interface.h"
+#include    "EXTI_interface.h"
+
+#include    "LED_interface.h"
+#include    "BUZZER_interface.h"
+
+typedef enum
+{
+	LEVEL_OK,
+	LEVEL_LOW,
+	LEVEL_HIGH
+}Level_st;
+
+
+int main(void)
+{
+	RCC_voidSysClkInt();
+	RCC_voidEnablePerClk(RCC_APB2, 2);
+	RCC_voidEnablePerClk(RCC_APB2, 9);
+	DIO_voidSetPinDirection(PORTA, PIN0, GPIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinDirection(PORTA, PIN0, GPIO_LOW);
+	DIO_voidSetPinDirection(PORTA, PIN1, GPIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinDirection(PORTA, PIN1, GPIO_LOW);
+	DIO_voidSetPinDirection(PORTA, PIN2, GPIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinDirection(PORTA, PIN2, GPIO_LOW);
+	DIO_voidSetPinDirection(PORTA, PIN3, GPIO_INPUT_PULL_UP_DOWN);
+	DIO_voidSetPinDirection(PORTA, PIN3, GPIO_LOW);
+	LED_voidInit(PORTB, PIN0);
+	LED_voidInit(PORTB, PIN1);
+	LED_voidInit(PORTB, PIN2);
+	LED_voidInit(PORTB, PIN3);
+	BUZZER_voidInit(PORTB, PIN4);
+	while (1)
+	{
+		Level_st Level = LEVEL_OK;
+		u8 LEVEL1 = DIO_u8GetPinValue(PORTA,PIN0);
+		u8 LEVEL2 = DIO_u8GetPinValue(PORTA,PIN1);
+		u8 LEVEL3 = DIO_u8GetPinValue(PORTA,PIN2);
+		u8 LEVEL4 = DIO_u8GetPinValue(PORTA,PIN3);
+		if (LEVEL1 == 0)
+		{
+			// DO nothing
+			Level = LEVEL_LOW;
+			LED_voidOFF(PORTB, PIN0);
+			LED_voidOFF(PORTB, PIN1);
+			LED_voidOFF(PORTB, PIN2);
+			LED_voidOFF(PORTB, PIN3);
+		}
+		else if (LEVEL4 == 1)
+		{
+			Level = LEVEL_HIGH;
+			LED_voidON(PORTB, PIN0);
+			LED_voidON(PORTB, PIN1);
+			LED_voidON(PORTB, PIN2);
+			LED_voidON(PORTB, PIN3);
+		}
+		else if (LEVEL3 == 1)
+		{
+			Level = LEVEL_OK;
+			LED_voidON(PORTB, PIN0);
+			LED_voidON(PORTB, PIN1);
+			LED_voidON(PORTB, PIN2);
+			LED_voidOFF(PORTB, PIN3);
+		}
+		else if (LEVEL2 == 1)
+		{
+			Level = LEVEL_OK;
+			LED_voidON(PORTB, PIN0);
+			LED_voidON(PORTB, PIN1);
+			LED_voidOFF(PORTB, PIN2);
+			LED_voidOFF(PORTB, PIN3);
+		}
+		else if (LEVEL1 == 1)
+		{
+			Level = LEVEL_OK;
+			LED_voidON(PORTB, PIN0);
+			LED_voidOFF(PORTB, PIN1);
+			LED_voidOFF(PORTB, PIN2);
+			LED_voidOFF(PORTB, PIN3);
+		}
+		if (Level == LEVEL_OK)
+		{
+			BUZZER_voidOFF(PORTB, PIN4);
+		}
+		else if (Level == LEVEL_LOW)
+		{
+			BUZZER_voidON(PORTB, PIN4);
+			_delay_ms(500);
+			BUZZER_voidOFF(PORTB, PIN4);
+			_delay_ms(500);
+
+		}
+		else if (Level == LEVEL_HIGH)
+		{
+			BUZZER_voidON(PORTB, PIN4);
+		}
+
+	}
+}
+
+
+//void	EXTI0_IRQHandler(void)
+//{
+//	//EXTI0_CallBack();
+//	/*		Led On		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_HIGH);
+//			_delay_ms(1000);
+//			/*		Led Off		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_LOW);
+//			_delay_ms(1000);
+//	/*	Clear EXTI0 Flag	*/
+//	//SET_BIT(EXTI -> PR,0);
+//}
+
+
+
+
+
+
+

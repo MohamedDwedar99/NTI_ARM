@@ -1,0 +1,23 @@
+/*
+ * LED_program.c
+ *
+ *  Created on: May 4, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#include "DIO_interface.h"
+#include "LED_interface.h"
+
+
+void LED_init(u8 port,u8 pin)
+{
+	DIO_voidSetPinDirection(port, pin, GPIO_OUTPUT_2MHZ_PP);
+}
+void LED_ON(u8 port,u8 pin)
+{
+
+}
+void LED_OFF(u8 port,u8 pin)
+{
+
+}

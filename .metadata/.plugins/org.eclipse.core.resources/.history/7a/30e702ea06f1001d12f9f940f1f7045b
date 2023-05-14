@@ -1,0 +1,13 @@
+/*
+ * NVIC_interface.h
+ *
+ *  Created on: May 12, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef NVIC_INTERFACE_H_
+#define NVIC_INTERFACE_H_
+
+
+
+#endif /* 01MCAL_02NVIC_NVIC_INTERFACE_H_ */

@@ -1,0 +1,3 @@
+BUZZER_program.c:16:6:BUZZER_voidInit	1
+BUZZER_program.c:20:6:BUZZER_voidON	1
+BUZZER_program.c:24:6:BUZZER_voidOFF	1

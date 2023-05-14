@@ -1,0 +1,4 @@
+../COTS/02ECU/LCD/LCD_program.c:29:6:LCD_void_8bitSendCommand	16	static
+../COTS/02ECU/LCD/LCD_program.c:40:6:LCD_void_8bitInit	16	static
+../COTS/02ECU/LCD/LCD_program.c:60:6:LCD_void_8bitSendChar	16	static
+../COTS/02ECU/LCD/LCD_program.c:71:6:LCD_void_8bitSendString	24	static

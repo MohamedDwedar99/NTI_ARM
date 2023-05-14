@@ -1,0 +1,19 @@
+/*
+ *
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+
+
+int main(void)
+{
+    RCC_voidSysClkInt();
+    RCC_voidEnablePerClk(RCC_APB2,RCC_IOPA);
+	while(1)
+	{
+		asm("NOP")
+	}
+	return 0;
+}

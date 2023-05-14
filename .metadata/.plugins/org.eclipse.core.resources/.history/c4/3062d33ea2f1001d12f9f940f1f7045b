@@ -1,0 +1,84 @@
+/*
+ * ADC_program.c
+ *
+ *  Created on: May 10, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#include "Std_Types.h"
+#include "Bit_Math.h"
+
+#include "ADC_config.h"
+#include "ADC_private.h"
+#include "ADC_interface.h"
+
+
+
+
+
+
+
+
+void ADC_voidInit(void)
+{
+	// Enable ADC
+	ADC1 -> CR2 = 1 << ADON;
+	// single convertion
+	//DATA Right
+	//Event trigger for software
+	ADC1 -> CR2 = 0b111 << EXTSEL;
+
+	//AD Cal
+	ADC1 -> CR2 = 1 << CAL;
+	while (GET_BIT(ADC1 -> CR2,CAL));
+
+}
+
+u16   ADC_u16_read(u32 channed)
+{
+ u16 Local_u16Reading;   //	ADC->DR &= 0x00000000;
+// Set Channel
+	if(channed <= CHANNEL_9)
+	{
+		CLR_BIT(ADC1->SQR3 , 0);
+		CLR_BIT(ADC1->SQR3 , 1);
+		CLR_BIT(ADC1->SQR3 , 2);
+		CLR_BIT(ADC1->SQR3 , 3);
+		CLR_BIT(ADC1->SQR3 , 4);
+	}
+
+	ADC1 -> CR2 = SWSTART;
+	while (!GET_BIT(ADC1 ->SR, EOC));
+
+	Local_u16Reading = ADC1 ->DR[0];
+	return Local_u16Reading;
+}
+//// Set Single conversion mode -> CONT -> 0
+//CLR_BIT(ADC->CR2 , 1);
+//// Start conversion of regular channels -> SWSTART -> 1
+//SET_BIT(ADC->CR2 , 22);
+//// Wait until the end of conversion -> SWSTART -> 0
+////while(GET_BIT(ADC->CR2 , 22) == 1);
+//
+//while(GET_BIT(ADC->SR , 1) != 1);
+//
+///*
+//    	// Start conversion of regular channels -> SWSTART -> 1
+//    	SET_BIT(ADC->CR2 , 0);
+//    	// Wait until the end of conversion -> SWSTART -> 0
+//    	while(GET_BIT(ADC->SR , 1) != 1);
+//    */
+//// Get data -> 0 -> 15
+////	Local_u32Reading = (ADC->DR) & 0x0000ffff;
+//// Return Data
+//return ADC->DR;
+//}
+
+// Enable Scan Mode
+//ADC1 -> CR1   |= (1 << SCAN);
+//// Continous mode, Enable Temp
+//ADC1 -> CR2 |=  (1 << ADON);
+////ADC1 -> CR2 |=  (1 << CONT);
+//ADC1 -> CR2 |=  (1 << CAL);
+//ADC1 -> CR2 |=   0b111 << 17;
+//ADC1 -> CR2 &= ~(1 << ALIGN);

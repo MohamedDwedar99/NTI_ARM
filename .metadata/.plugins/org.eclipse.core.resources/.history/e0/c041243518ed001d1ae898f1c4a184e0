@@ -1,0 +1,16 @@
+
+
+
+#include "DIO_interface.h"
+
+
+int main(void)
+{
+	RCC_voidSysClkInt();
+	RCC_voidEnablePerClk(RCC_APB2, 2);
+	NVIC_voidInit();
+	while (1)
+	{
+
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32F103C8_Drivers/Src/Segment7.c&apos; to &apos;Segment7_program.c&apos;" description="Rename resource &apos;Segment7.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/Segment7.c" name="Segment7_program.c" stamp="1683465548302" updateReferences="true"/>
+</session>

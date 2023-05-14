@@ -1,0 +1,11 @@
+
+
+
+#include "DIO_interface.h"
+
+
+int main(void)
+{
+    /* Loop forever */
+	for(;;);
+}

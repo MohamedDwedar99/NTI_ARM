@@ -1,0 +1,28 @@
+/*
+ *
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+#include "GPIO_interface.h"
+
+#include "LCD_interface.h"
+#include "KEYPAD_interface.h"
+
+u8 x = 0;
+int main(void)
+{
+    RCC_voidSysClkInt();
+    RCC_voidEnablePerClk(RCC_APB2,RCC_IOPA);
+    RCC_voidEnablePerClk(RCC_APB2,RCC_IOPB);
+    KEYPAD_voidInit();
+
+    asm("NOP");
+	while(1)
+	{
+		u8 x = KEYPAD_u8Read();
+		asm("NOP");
+	}
+	return 0;
+}

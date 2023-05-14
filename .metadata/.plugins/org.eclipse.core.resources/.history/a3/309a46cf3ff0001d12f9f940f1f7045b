@@ -1,0 +1,42 @@
+/*
+ * GPIO_interface.h
+ *
+ *  Created on: May 11, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef GPIO_INTERFACE_H_
+#define GPIO_INTERFACE_H_
+
+#define MODE 0
+#define CNF  2
+
+#define PIN0           0
+#define PIN1           1
+#define PIN2           2
+#define PIN3           3
+#define PIN4           4
+#define PIN5           5
+#define PIN6           6
+#define PIN7           7
+#define PIN8           8
+#define PIN9           9
+#define PIN10          10
+#define PIN11          11
+#define PIN12          12
+#define PIN13          13
+#define PIN14          14
+#define PIN15          15
+
+#define PORTA          0
+#define PORTB          1
+#define PORTC          2
+
+
+void GPIO_voidSetPinDirection(u8 PORT,u8 PIN);
+void GPIO_voidSetPinValue(u8 PORT,u8 PIN);
+u8   GPIO_voidGetPinValue(u8 PORT,u8 PIN);
+void GPIO_voidTogPinValue(u8 port, u8 pin);
+
+
+#endif /* 01MCAL_01GPIO_GPIO_INTERFACE_H_ */

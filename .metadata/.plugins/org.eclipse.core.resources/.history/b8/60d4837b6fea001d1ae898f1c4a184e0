@@ -1,0 +1,15 @@
+/*
+ * LED_interface.h
+ *
+ *  Created on: May 4, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef LED_INTERFACE_H_
+#define LED_INTERFACE_H_
+
+void LED_voidInit(u8 port,u8 pin);
+void LED_voidON(u8 port,u8 pin);
+void LED_voidOFF(u8 port,u8 pin);
+
+#endif /* LED_INTERFACE_H_ */

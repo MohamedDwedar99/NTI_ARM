@@ -1,0 +1,238 @@
+17:56:15 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1756	      8	   1568	   3332	    d04	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+17:56:25 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1756	      8	   1568	   3332	    d04	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+17:57:44 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../COTS/01 MCAL/06 ADC/ADC_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"COTS/01 MCAL/06 ADC/ADC_program.d" -MT"COTS/01 MCAL/06 ADC/ADC_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "COTS/01 MCAL/06 ADC/ADC_program.o"
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1744	      8	   1568	   3320	    cf8	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.list
+Finished building: NTI_Layerd.hex
+ 
+ 
+17:57:55 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1744	      8	   1568	   3320	    cf8	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+17:59:29 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../COTS/01 MCAL/06 ADC/ADC_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"COTS/01 MCAL/06 ADC/ADC_program.d" -MT"COTS/01 MCAL/06 ADC/ADC_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "COTS/01 MCAL/06 ADC/ADC_program.o"
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1744	      8	   1568	   3320	    cf8	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.hex
+Finished building: NTI_Layerd.list
+ 
+ 
+18:01:59 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../COTS/01 MCAL/06 ADC/ADC_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"COTS/01 MCAL/06 ADC/ADC_program.d" -MT"COTS/01 MCAL/06 ADC/ADC_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "COTS/01 MCAL/06 ADC/ADC_program.o"
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1756	      8	   1568	   3332	    d04	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.hex
+Finished building: NTI_Layerd.list
+ 
+ 
+18:02:22 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1756	      8	   1568	   3332	    d04	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+18:05:03 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../COTS/01 MCAL/06 ADC/ADC_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"COTS/01 MCAL/06 ADC/ADC_program.d" -MT"COTS/01 MCAL/06 ADC/ADC_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "COTS/01 MCAL/06 ADC/ADC_program.o"
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1744	      8	   1568	   3320	    cf8	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.list
+Finished building: NTI_Layerd.hex
+ 
+ 
+18:05:51 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1744	      8	   1568	   3320	    cf8	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+18:18:21 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:10: warning: implicit declaration of function 'ADC_u16_read' [-Wimplicit-function-declaration]
+   25 |   read = ADC_u16_read(CHANNEL_0);
+      |          ^~~~~~~~~~~~
+../Src/main.c:26:7: warning: unused variable 'x' [-Wunused-variable]
+   26 |   f32 x = 4096/read;
+      |       ^
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   2308	      8	   1568	   3884	    f2c	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.hex
+ 
+Finished building: NTI_Layerd.list
+ 
+18:19:40 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2308	      8	   1568	   3884	    f2c	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+18:20:33 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2308	      8	   1568	   3884	    f2c	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+18:22:32 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:10: warning: implicit declaration of function 'ADC_u16_read' [-Wimplicit-function-declaration]
+   25 |   read = ADC_u16_read(CHANNEL_0);
+      |          ^~~~~~~~~~~~
+../Src/main.c:26:7: warning: unused variable 'x' [-Wunused-variable]
+   26 |   f32 x = read/4096*3.3;
+      |       ^
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   3444	      8	   1568	   5020	   139c	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.list
+Finished building: NTI_Layerd.hex
+ 
+ 
+18:23:21 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:10: warning: implicit declaration of function 'ADC_u16_read' [-Wimplicit-function-declaration]
+   25 |   read = ADC_u16_read(CHANNEL_0);
+      |          ^~~~~~~~~~~~
+../Src/main.c:26:7: warning: unused variable 'x' [-Wunused-variable]
+   26 |   f32 x = (f32)read/4096*3.3;
+      |       ^
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
+arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+Finished building: NTI_Layerd.hex
+ 
+Finished building: NTI_Layerd.list
+ 
+18:25:08 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+19:46:28 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+19:48:04 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+19:48:52 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+19:55:40 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+19:59:52 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 
+20:01:03 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+make -j4 all 
+arm-none-eabi-size   NTI_Layerd.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4668	      8	   1568	   6244	   1864	NTI_Layerd.elf
+Finished building: default.size.stdout
+ 

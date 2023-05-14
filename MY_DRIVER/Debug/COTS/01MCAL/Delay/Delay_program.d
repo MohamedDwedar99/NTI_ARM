@@ -1,0 +1,5 @@
+COTS/01MCAL/Delay/Delay_program.o: ../COTS/01MCAL/Delay/Delay_program.c \
+ E:/NTI/STM32/MY_DRIVER/COTS/00LIB/Bit_Math.h \
+ E:/NTI/STM32/MY_DRIVER/COTS/00LIB/Std_Types.h
+E:/NTI/STM32/MY_DRIVER/COTS/00LIB/Bit_Math.h:
+E:/NTI/STM32/MY_DRIVER/COTS/00LIB/Std_Types.h:

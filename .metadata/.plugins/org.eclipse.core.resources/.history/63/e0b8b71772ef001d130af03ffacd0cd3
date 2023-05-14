@@ -1,0 +1,36 @@
+/*
+ * ADC_interface.h
+ *
+ *  Created on: May 10, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef ADC_ADC_INTERFACE_H_
+#define ADC_ADC_INTERFACE_H_
+
+// ADC_SR status
+#define AWD        0        /*Clear by write 0*/
+#define EOC        1        /*Clear by write 0*/
+#define JEOC       2        /*Clear by write 0*/
+#define JSTRT      3        /*Clear by write 0*/
+#define STRT       4        /*Clear by write 0*/
+
+// ADC_CR1
+#define AWDCH   0
+#define EOCIE   5
+#define AWDIE   6
+#define JEOCIE  7
+#define SCAN    8
+#define AWDSGL  9
+#define JAUTO   10
+#define DISCEN  11
+#define JDISCEN 12
+#define
+#define
+#define
+#define
+#define
+
+
+
+#endif /* 01_MCAL_06_ADC_ADC_INTERFACE_H_ */

@@ -1,0 +1,7 @@
+../COTS/01MCAL/02NVIC/NVIC_program.c:16:7:NVIC_voidInit	4	static
+../COTS/01MCAL/02NVIC/NVIC_program.c:27:7:NVIC_voidEnablePerInt	16	static
+../COTS/01MCAL/02NVIC/NVIC_program.c:39:7:NVIC_voidDisablePerInt	16	static
+../COTS/01MCAL/02NVIC/NVIC_program.c:52:7:NVIC_voidSetPendingFlag	16	static
+../COTS/01MCAL/02NVIC/NVIC_program.c:65:7:NVIC_voidClrPendingFlag	16	static
+../COTS/01MCAL/02NVIC/NVIC_program.c:79:6:NVIC_u8ReadActiveFlag	24	static
+../COTS/01MCAL/02NVIC/NVIC_program.c:96:7:NVIC_voidSetSwIntPriority	16	static

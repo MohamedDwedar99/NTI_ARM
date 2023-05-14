@@ -1,0 +1,87 @@
+/*
+ * ADC_interface.h
+ *
+ *  Created on: May 10, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef ADC_ADC_INTERFACE_H_
+#define ADC_ADC_INTERFACE_H_
+
+// ADC_SR status
+#define AWD        0        /*Clear by write 0*/
+#define EOC        1        /*Clear by write 0*/
+#define JEOC       2        /*Clear by write 0*/
+#define JSTRT      3        /*Clear by write 0*/
+#define STRT       4        /*Clear by write 0*/
+
+// ADC_CR1
+#define AWDCH   0
+#define EOCIE   5
+#define AWDIE   6
+#define JEOCIE  7
+#define SCAN    8
+#define AWDSGL  9
+#define JAUTO   10
+#define DISCEN  11
+#define JDISCEN 12
+#define DISCNUM 13
+#define DUALMOD 16
+#define JAWDEN  22
+#define AWDEN   23
+
+// ADC_CR2
+#define ADON     0
+#define CONT     1
+#define CAL      2
+#define RSTCAL   3
+#define DMA      8
+#define ALIGN    11
+#define JEXTSEL  12
+#define JEXTTRIG 15
+#define EXTSEL   17
+#define EXTTRIG  20
+#define JSWSTART 21
+#define SWSTART  22
+#define TSVREFE  23
+
+//ADC_SMPR1
+#define SMP10    0
+#define SMP11    3
+#define SMP12    6
+#define SMP13    9
+#define SMP14    12
+#define SMP15    15
+#define SMP16    18
+#define SMP17    21
+
+//ADC_SMPR2
+#define SMP0     0
+#define SMP1     3
+#define SMP2     6
+#define SMP3     9
+#define SMP4     12
+#define SMP5     15
+#define SMP6     18
+#define SMP7     21
+#define SMP8     24
+#define SMP9     27
+
+//ADC_JOFRx  x = 1->4
+#define JOFFSET1   0
+#define JOFFSET2   0
+#define JOFFSET3   0
+#define JOFFSET4   0
+
+//ADC_LTR
+#define LT         0
+
+
+//ADC_SQR1
+#define SQ13       0
+#define SQ14       5
+#define SQ15       10
+#define SQ16       16
+#define L          20
+
+#endif /* 01_MCAL_06_ADC_ADC_INTERFACE_H_ */

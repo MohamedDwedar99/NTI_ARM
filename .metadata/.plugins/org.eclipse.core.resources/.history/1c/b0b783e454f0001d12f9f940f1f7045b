@@ -1,0 +1,28 @@
+/*
+ * LCD_config.h
+ *
+ *  Created on: May 4, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#ifndef HAL_LCD_LCD_CONFIG_H_
+#define HAL_LCD_LCD_CONFIG_H_
+
+
+
+#define CONTROL_PORT	    PORTB
+#define DATA_PORT		    PORTA
+
+
+#define RS_PIN				PIN0
+#define RW_PIN				PIN1
+#define E_PIN				PIN2
+
+#define MODE			    LCD_SET_8MODE
+#define	DISPLAY             LCD_DISPLAT_ON
+#define WRITE_DIR			LCD_CURSER_INCREMENT
+
+
+
+
+#endif /* HAL_LCD_LCD_CONFIG_H_ */

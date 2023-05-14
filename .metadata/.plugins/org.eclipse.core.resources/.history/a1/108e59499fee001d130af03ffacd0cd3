@@ -1,0 +1,12 @@
+/*
+ * Private.h
+ *
+ *  Created on: May 9, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef PRIVATE_H_
+#define PRIVATE_H_
+
+#define DMA_BASE_ADD
+#endif /* 05_DMA_PRIVATE_H_ */

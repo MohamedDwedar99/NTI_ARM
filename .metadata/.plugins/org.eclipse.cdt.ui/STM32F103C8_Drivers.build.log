@@ -1,0 +1,20 @@
+17:20:27 **** Incremental Build of configuration Debug for project STM32F103C8_Drivers ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/DIO_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DIO_program.d" -MT"Src/DIO_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DIO_program.o"
+arm-none-eabi-gcc -o "STM32F103C8_Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\NTI_Workspace\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C8_Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C8_Drivers.elf
+ 
+arm-none-eabi-size   STM32F103C8_Drivers.elf 
+arm-none-eabi-objdump -h -S  STM32F103C8_Drivers.elf  > "STM32F103C8_Drivers.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C8_Drivers.elf  "STM32F103C8_Drivers.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1988	     20	   1564	   3572	    df4	STM32F103C8_Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C8_Drivers.list
+Finished building: STM32F103C8_Drivers.hex
+ 
+ 
+
+17:20:28 Build Finished. 0 errors, 0 warnings. (took 1s.16ms)
+

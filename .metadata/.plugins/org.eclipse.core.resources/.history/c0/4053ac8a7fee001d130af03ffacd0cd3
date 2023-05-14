@@ -1,0 +1,28 @@
+/*
+ * RCC_program.c
+ *
+ *  Created on: May 8, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#include "Std_Types.h"
+#include "Bit_Math.h"
+#include "RCC_config.h"
+#include "RCC_interface.h"
+#include "RCC_private.h"
+
+void		RCC_voidSysClkInt(void)
+{
+	RCC -> CFGR = Sys_Clock      << SW;
+	RCC -> CFGR = AHB_prescaler  << SWS;
+	RCC -> CFGR = APB1_prescaler << HPRE;
+	RCC -> CFGR = APB2_prescaler << PPRE1;
+	RCC -> CFGR = ADC_prescaler  << PPRE2;
+	RCC -> CFGR = PLL_source     << ADCPRE;
+	RCC -> CFGR = PLL_HSE_Divide << PLLSRC;
+	RCC -> CFGR = PLL_MulFactor  << PLLXTPRE;
+	RCC -> CFGR = USB_prescaler  << PLLMUL;
+	RCC -> CFGR = Clock_output   << USBPRE;
+	RCC -> CFGR = Clock_output   << MCO;
+
+}

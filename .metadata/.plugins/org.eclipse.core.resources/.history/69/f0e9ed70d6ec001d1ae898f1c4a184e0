@@ -1,0 +1,33 @@
+#include	"Std_Types.h"
+#include	"Bit_Math.h"
+
+#include	"RCC_interface.h"
+#include    "DIO_interface.h"
+#include    "Delay_interface.h"
+#include    "Segment7_interface.h"
+#include    "LED_interface.h"
+
+
+/*	C13 ==> Built in led (Toggle Led)		*/
+
+int main()
+{
+	/*	System Clock Init			*/
+	RCC_voidSysClkInt();
+	/*	Enable RCC for GPIOC 		*/
+	RCC_voidEnablePerClk(RCC_APB2,4);
+
+	/*	C13 Direction 	"Output @ 2MHz Push Pull"	*/
+	DIO_voidSetPinDirection(PORTC,PIN13,GPIO_OUTPUT_2MHZ_PP);
+
+	while(1)
+	{
+		/*		Led On		*/
+		DIO_voidSetPinValue(PORTC,PIN13,GPIO_LOW);
+		_delay_ms(1000);
+		/*		Led Off		*/
+		DIO_voidSetPinValue(PORTC,PIN13,GPIO_HIGH);
+		_delay_ms(1000);
+	}
+	return 0;
+}

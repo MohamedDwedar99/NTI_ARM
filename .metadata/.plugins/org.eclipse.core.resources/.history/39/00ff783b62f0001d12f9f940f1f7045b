@@ -1,0 +1,14 @@
+/*
+ * KEYPAD_config.h
+ *
+ *  Created on: May 7, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#ifndef HAL_KEYPAD_KEYPAD_CONFIG_H_
+#define HAL_KEYPAD_KEYPAD_CONFIG_H_
+
+#define KEYPAD_PORT       PORTA
+#define KEYPAD_start         PIN0
+
+#endif /* HAL_KEYPAD_KEYPAD_CONFIG_H_ */

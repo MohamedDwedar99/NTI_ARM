@@ -1,0 +1,96 @@
+/*
+ * GPIO_program.c
+ *
+ *  Created on: May 11, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+
+#include "GPIO_interface.h"
+#include "GPIO_private.h"
+
+
+void GPIP_voidSetPinDirection(u8 PORT,u8 PIN,u8 DIRECTION)
+{
+	if (PORT < 3 && PIN < 16)
+	{
+		if (PIN < 8)
+		{
+			switch(PORT)
+			{
+			case PORTA:
+				// Clear the 4 bits
+				GPIOA -> CRL &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOA -> CRL &= ((Direction)<<(PIN * 4));
+				break;
+			case PORTB:
+				// Clear the 4 bits
+				GPIOB -> CRL &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRL &= ((Direction)<<(PIN * 4));
+				break;
+			case PORTC:
+				// Clear the 4 bits
+				GPIOB -> CRL &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRL &= ((Direction)<<(PIN * 4));
+				break;
+			}
+		}
+		else
+		{
+			PIN -= 8;
+			switch(PORT)
+			{
+			case PORTA:
+				// Clear the 4 bits
+				GPIOA -> CRH &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOA -> CRH &= ((Direction)<<(PIN * 4));
+				break;
+			case PORTB:
+				// Clear the 4 bits
+				GPIOB -> CRH &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRH &= ((Direction)<<(PIN * 4));
+				break;
+			case PORTC:
+				// Clear the 4 bits
+				GPIOB -> CRH &= ~((0b1111)<<(PIN * 4));
+				// Assign the Direction
+				GPIOB -> CRH &= ((Direction)<<(PIN * 4));
+				break;
+			}
+		}
+	}
+	else
+	{
+		//Error
+	}
+}
+void GPIP_voidSetPinValue(u8 PORT,u8 PIN)
+{
+	if (PORT < 3 && PIN < 16)
+	{
+		switch (PORT)
+		{
+		case PORTA:
+			SET_BIT(GPIOA -> BSRR,PIN);
+			break;
+
+		}
+	}
+}
+u8  GPIP_voidGetPinValue(u8 PORT,u8 PIN)
+{
+	return 0;
+}
+
+void GPIO_voidTogPinValue(u8 port, u8 pin)
+{
+
+}

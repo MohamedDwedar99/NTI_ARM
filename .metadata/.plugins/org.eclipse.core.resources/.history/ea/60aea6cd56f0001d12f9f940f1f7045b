@@ -1,0 +1,24 @@
+/*
+ *
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+#include "GPIO_interface.h"
+
+u8 x = 0;
+int main(void)
+{
+    RCC_voidSysClkInt();
+    RCC_voidEnablePerClk(RCC_APB2,RCC_IOPA);
+    RCC_voidEnablePerClk(RCC_APB2,RCC_IOPB);
+    LCD_void_8bitInit();
+
+    asm("NOP");
+	while(1)
+	{
+		LCD_void_8bitSendChar('A');
+	}
+	return 0;
+}

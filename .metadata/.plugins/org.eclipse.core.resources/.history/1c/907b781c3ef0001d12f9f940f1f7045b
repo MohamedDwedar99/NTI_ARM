@@ -1,0 +1,49 @@
+/*
+ * GPIO_private.h
+ *
+ *  Created on: May 11, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef GPIO_PRIVATE_H_
+#define GPIO_PRIVATE_H_
+
+typedef struct {
+	u32 CRL;
+	u32 CRH;
+	u32 IDR;
+	u32 ODR;
+	u32 BSSR;
+	u32 BRR;
+	u32 LCKR;
+}GPIO_type;
+
+#define GPIOA        ((volatile GPIO_type *)(0x40010800))
+#define GPIOB        ((volatile GPTO_type *)(0x40011000))
+#define GPIOC        ((volatile GPTO_type *)(0x40010800))
+
+
+//INPUT MODE (CNF)
+#define Analog_mode           0b00
+#define Flating_Input         0b01
+#define PULL_UP_DOWN          0b10
+
+//OUTPOT MODE (CNF)
+#define G_PUSH_PULL           0b00
+#define G_OPEN_DRAIN          0b01
+#define A_PUSH_PULL           0b10
+#define A_OPEN_DRAIN          0b11
+
+//MODE
+#define INPUT                 0b00
+#define OUTPUT_10MHZ          0b01
+#define OUTPUT_2MHZ           0b10
+#define OUTPUT_50MHZ          0b11
+
+
+
+
+
+
+
+#endif /* 01MCAL_01GPIO_GPIO_PRIVATE_H_ */

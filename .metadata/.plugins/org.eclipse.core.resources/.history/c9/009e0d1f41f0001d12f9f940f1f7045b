@@ -1,0 +1,53 @@
+/*
+ * GPIO_program.c
+ *
+ *  Created on: May 11, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "RCC_interface.h"
+
+#include "GPIO_interface.h"
+#include "GPIO_private.h"
+
+
+void GPIP_voidSetPinDirection(u8 PORT,u8 PIN,u8 DIRECTION)
+{
+	if ((PORT <= PORTC) && (PIN <= PIN15))
+	{
+		switch (PORT)
+		{
+		case PORTA:
+			if (PIN <= PIN7)
+			{
+				// Clear
+				GPIOA -> CRL &= ~(0b1111 << PIN*4);
+				GPIOA -> CRL |= ~(DIRECTION << PIN*4);
+			}
+			else
+			{
+				PIN = PIN - 7;
+				GPIOA -> CRH &= ~(0b1111 << PIN*4);
+			}   GPIOA -> CRH |= ~(DIRECTION << PIN*4);
+		}
+	}
+	else
+	{
+		//Error
+	}
+}
+void GPIP_voidSetPinValue(u8 PORT,u8 PIN)
+{
+
+}
+u8  GPIP_voidGetPinValue(u8 PORT,u8 PIN)
+{
+	return 0;
+}
+
+void GPIO_voidTogPinValue(u8 port, u8 pin)
+{
+
+}

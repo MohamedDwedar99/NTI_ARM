@@ -1,0 +1,2 @@
+../COTS/02ECU/KEYPAD/KEYPAD_program.c:24:6:KEYPAD_voidInit	16	static
+../COTS/02ECU/KEYPAD/KEYPAD_program.c:41:4:KEYPAD_u8Read	16	static

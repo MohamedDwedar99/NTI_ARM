@@ -1,0 +1,41 @@
+/*
+ * RCC_config.h
+ *
+ *  Created on: May 8, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef RCC_CONFIG_H_
+#define RCC_CONFIG_H_
+
+#define Sys_Clock                   /* choose the clock source of the system
+                                     * 1-HSI
+                                     * 2-HSE
+                                     * 3-PLL
+                                     */
+
+#define AHB_prescaler               /* chose the Prescaller of AHB SYSCLK_x
+                                     * x = (1,2,4,8,16,64,128,256,512)
+                                     */
+
+#define Sys_Clock                   /*
+                                     *
+                                     */
+
+#define Sys_Clock                   /*
+                                     *
+                                     */
+
+#define Sys_Clock                   /*
+                                     *
+                                     */
+
+#define Sys_Clock                   /*
+                                     *
+                                     */
+
+#define Sys_Clock                   /*
+                                     *
+                                     */
+
+#endif /* 01MCAL_00RCC_RCC_CONFIG_H_ */

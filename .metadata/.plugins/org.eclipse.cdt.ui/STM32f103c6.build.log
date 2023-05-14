@@ -1,0 +1,10 @@
+09:23:31 **** Incremental Build of configuration Debug for project STM32f103c6 ****
+make -j4 all 
+arm-none-eabi-size   STM32f103c6.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1588	      8	   1568	   3164	    c5c	STM32f103c6.elf
+Finished building: default.size.stdout
+ 
+
+09:23:32 Build Finished. 0 errors, 0 warnings. (took 455ms)
+

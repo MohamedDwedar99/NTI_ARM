@@ -1,0 +1,40 @@
+/*
+ * RCC_interface.h
+ *
+ *  Created on: May 8, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef RCC_INTERFACE_H_
+#define RCC_INTERFACE_H_
+
+// Clock configuration Register
+#define SW         0
+#define SWS        2
+#define HPRE       4
+#define PPRE1      8
+#define PPRE2      11
+#define ADCPRE     14
+#define PLLSRC     16
+#define PLLXTPRE   17
+#define PLLMUL     18
+#define USBPRE     22
+#define MCO        24
+
+// AHB Enable Register
+#define DMA1EN     0
+#define DMA2EN     1
+#define SRAMEN     2
+#define FLITFEN    4
+#define CRCEN      6
+#define FSMCEN     8
+#define SDIOEN     10
+
+void		RCC_voidSysClkInt(void);
+
+// for peripheral clock
+void		RCC_voidEnablePerClk(u8 BusId , u8 PerId);
+// for peripheral clock
+void		RCC_voidDisablePerClk(u8 BusId , u8 PerId);
+
+#endif /* 01MCAL_00RCC_RCC_INTERFACE_H_ */

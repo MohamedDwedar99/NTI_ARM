@@ -1,0 +1,30 @@
+/*
+ * Private.h
+ *
+ *  Created on: May 9, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef PRIVATE_H_
+#define PRIVATE_H_
+
+#define DMA1_BASE_ADD   0x40020000
+
+typedef struct
+{
+	u32 CCR;
+	u32 CNDTR;
+	u32 CPAR;
+	u32 CMAR;
+	u32 reserved;
+}DMA_Channel;
+
+typedef struct
+{
+	u32 ISR;
+	u32 IFCR;
+	DMA_Channel Channed[7];
+}DMA1_type;
+
+#define       DMA1     ((volatile DMA *)(DMA_BASE_ADD))
+#endif /* 05_DMA_PRIVATE_H_ */

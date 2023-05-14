@@ -1,0 +1,35 @@
+/*
+ * DMA_config.h
+ *
+ *  Created on: May 13, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef DMA_INTERFACE_H_
+#define DMA_INTERFACE_H_
+
+
+#define DMA_Channel1               0
+#define DMA_Channel2               1
+#define DMA_Channel3               2
+#define DMA_Channel4               3
+#define DMA_Channel5               4
+#define DMA_Channel6               5
+#define DMA_Channel7               6
+
+#define DMA_Memory                 0
+#define DMA_Peripheral             1
+
+#define DMA_VERYHIGH               0b11
+#define DMA_HIGH                   0b10
+#define DMA_MIDEUM                 0b01
+#define DMA_LOW                    0b00
+
+#define SIZE_8BIT                  0b00
+#define SIZE_16BIT                 0b01
+#define SIZE_32BIT                 0b10
+
+void	DMA1_voidChannelInit(u8 Channel_copy,u8 source,u8 sink);
+void	DMA1_voidStartChannel(u32 * SrcAdd,u32 * DestAdd,u16 BlockLength);
+
+#endif /* 01_MCAL_05_DMA_DMA_CONFIG_H_ */

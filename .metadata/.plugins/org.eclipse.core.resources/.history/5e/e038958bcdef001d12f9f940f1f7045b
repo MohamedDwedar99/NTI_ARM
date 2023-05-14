@@ -1,0 +1,19 @@
+/*
+ * ADC_program.c
+ *
+ *  Created on: May 10, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#include "Std_Types.h"
+#include "Bit_Math.h"
+
+#include "ADC_config.h"
+#include "ADC_private.h"
+#include "ADC_interface.h"
+
+
+void ADC_voidInit(void)
+{
+	RCC->CR1
+}
