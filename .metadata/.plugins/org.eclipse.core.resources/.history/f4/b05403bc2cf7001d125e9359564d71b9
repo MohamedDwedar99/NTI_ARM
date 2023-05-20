@@ -1,0 +1,31 @@
+/*
+ * I2C_program.c
+ *
+ *  Created on: May 17, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#include "Std_Types.h"
+#include "Bit_Math.h"
+
+#include "I2C_config.h"
+#include "I2C_private.h"
+#include "I2C_Interface.h"
+void static Reset(void);
+void static Reset(void)
+{
+	I2C1 -> CR1  |= (1 << SWRST);
+	CLR_BIT(I2C1 -> CR1, SWRST);
+}
+
+ void I2C1_voidMasterInit(void)
+ {
+	 // Reset I2C
+	 I2C1 -> CR1  |= (1 << SWRST);
+	 /***Select Master Clock *****/
+	 // Select Slow Mode (do nothing)
+	 // Select Clock mode
+	 I2C1 -> CCR  |= (1 << CCR_CCR);
+	 I2C1 -> CR1  |= (40 << FREQ);
+	 //
+ }

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;NTI_Layerd/COTS/01 MCAL/USART&apos; to &apos;07 USART&apos;" description="Rename resource &apos;USART&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="COTS/01 MCAL/USART" name="07 USART" stamp="1684097850281" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;NTI_Layerd/COTS/02ECU&apos; to &apos;02 ECU&apos;" description="Rename resource &apos;02ECU&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="COTS/02ECU" name="02 ECU" stamp="1684437345187" updateReferences="true"/>
+</session>

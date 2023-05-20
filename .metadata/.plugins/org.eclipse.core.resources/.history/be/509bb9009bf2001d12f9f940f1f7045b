@@ -1,0 +1,55 @@
+/*
+ * USART_program.c
+ *
+ *  Created on: May 14, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+
+/*
+ *
+ *
+in the main:
+1- Enable UART(1,2,3) RCC
+2- GPIO => Alternate Function A9 (Tx) Direction OUTPUT AF_PP
+3- GPIO A10 (Rx) Direction INPUT_FLOAT
+*/
+
+#include "USART_config.h"
+#include "USART_interface.h"
+#include "USART_private.h"
+
+void UART_init(void) {
+	// set Baud rate
+	USART1 -> BRR = USART1_BAUDRATE;
+
+}
+
+//enable transmitter
+void UART_enableTX(void) {
+
+}
+//enable receiver
+void UART_enableRX(void) {
+
+}
+//transmit data
+void UART_TXdata(uint8_t data){
+//	 while(!get_bit(UCSRA,UCSRA_UDRE)) ;
+//	 UDR = data ;
+}
+//receive data
+void UART_RXdata (uint8_t *data ) {
+//	while(!get_bit(UCSRA ,UCSRA_RXC)) ;
+//	*data = UDR ;
+
+}
+
+void UART1_voidSendString(u8 * const str)
+{
+
+}
+u8 * const UART1_StrReceiveString()
+{
+	return;
+}

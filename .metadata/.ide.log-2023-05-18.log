@@ -1,0 +1,26 @@
+2023-05-18 20:39:43,554 [INFO] Activator:176 - 
+
+
+2023-05-18 20:39:43,577 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-18 20:40:02,563 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-18 20:40:28,111 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:40:28,112 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:40:28,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:40:28,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:40:29,255 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:40:29,255 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:40:29,728 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:40:29,748 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:50:07,365 [INFO] Activator:176 - 
+
+
+2023-05-18 20:50:07,372 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-18 20:50:22,559 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-18 20:50:47,226 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:50:47,227 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:50:47,736 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:50:47,736 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:50:48,049 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:50:48,050 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2023-05-18 20:50:48,531 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :22087:13: Premature end of file.
+2023-05-18 20:50:48,535 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

@@ -1,0 +1,7 @@
+../COTS/01 MCAL/07 USART/USART_program.c:23:6:UART_init	4	static
+../COTS/01 MCAL/07 USART/USART_program.c:43:6:UART_enableTX	4	static
+../COTS/01 MCAL/07 USART/USART_program.c:47:6:UART_enableRX	4	static
+../COTS/01 MCAL/07 USART/USART_program.c:51:6:UART_TXdata	16	static
+../COTS/01 MCAL/07 USART/USART_program.c:59:5:UART_RXdata	16	static
+../COTS/01 MCAL/07 USART/USART_program.c:68:6:UART1_voidSendString	24	static
+../COTS/01 MCAL/07 USART/USART_program.c:77:12:UART1_StrReceiveString	16	static

@@ -1,0 +1,26 @@
+/*
+ * SPI_private.h
+ *
+ *  Created on: May 17, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#ifndef _SPI_PRIVATE_H_
+#define _SPI_PRIVATE_H_
+
+typedef struct {
+	u32 CR1;
+	u32 CR2;
+	u32 SR;
+	u32 DR;
+	u32 CRCPR;
+	u32 RXCRCR;
+	u32 TXCRCR;
+	u32 I2SCFGR;
+	u32 I2SPR;
+}SPI_type;
+
+
+#define SPI1 ((volatile SPI_type *)(0x40013000))
+
+#endif /* 01_MCAL_08_SPI_SPI_PRIVATE_H_ */

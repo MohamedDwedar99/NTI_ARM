@@ -1,0 +1,57 @@
+#include	"Std_Types.h"
+#include	"Bit_Math.h"
+#include    "Delay_interface.h"
+
+#include	"RCC_interface.h"
+#include	"DIO_interface.h"
+
+#include	"NVIC_interface.h"
+#include    "EXTI_interface.h"
+#include    "USART_interface.h"
+#include    "LED_interface.h"
+#include    "SPI_interface.h"
+#include    "I2C_Interface.h"
+
+int main (void)
+{
+    RCC_voidSysClkInt();
+	RCC_voidEnablePerClk(RCC_APB2, 2);
+	RCC_voidEnablePerClk(RCC_APB2, 3);
+	RCC_voidEnablePerClk(RCC_APB2, 4);
+	RCC_voidEnablePerClk(RCC_APB2, 0);
+	RCC_voidEnablePerClk(RCC_APB2, 21);
+	SPI1_voidInit();
+	LED_voidInit(PORTC, PIN13);
+	while (1)
+	{
+		u8 send = 'A';
+		u8 recive = 0xff;
+		SPI_voidMasterSend(send);
+		recive = SPI_voidMasterRecieve();
+		if (send == recive)
+		{
+			LED_voidON(PORTC, PIN13);
+		}
+	}
+	return 1;
+}
+
+//void	EXTI0_IRQHandler(void)
+//{
+//	//EXTI0_CallBack();
+//	/*		Led On		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_HIGH);
+//			_delay_ms(1000);
+//			/*		Led Off		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_LOW);
+//			_delay_ms(1000);
+//	/*	Clear EXTI0 Flag	*/
+//	//SET_BIT(EXTI -> PR,0);
+//}
+
+
+
+
+
+
+

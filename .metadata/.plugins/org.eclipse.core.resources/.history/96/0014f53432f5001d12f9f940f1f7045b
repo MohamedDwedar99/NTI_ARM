@@ -1,0 +1,63 @@
+/*
+ * SPI_private.h
+ *
+ *  Created on: May 17, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#ifndef _SPI_PRIVATE_H_
+#define _SPI_PRIVATE_H_
+
+typedef struct {
+	u32 CR1;
+	u32 CR2;
+	u32 SR;
+	u32 DR;
+	u32 CRCPR;
+	u32 RXCRCR;
+	u32 TCCRCR;
+	u32 I2SCFGR;
+	u32 I2SPR;
+}SPI_type;
+
+#define  SPI1        ((volatile SPI_type *)(0x40013000))
+
+
+// CR1
+#define CR1_CPHA           0
+#define CR1_CPOL           1
+#define MSTR               2
+#define CR1_BR             3
+#define CR1_SPE            6
+#define CR1_LSPFIRST       7
+#define CR1_SSI            8
+#define CR1_SSM            9
+#define CR1_RXONLY         10
+#define CR1_DFF            11
+#define CR1_CRCNEXT        12
+#define CR1_CRCEN          13
+#define CR1_BIDIOE         14
+#define CR1_BIDIMODE       15
+
+
+// CR2
+#define CR2_RXDMAED        0
+#define CR2_TXDMAEN        1
+#define CR2_SSOE           2
+#define CR2_ERRIE          5
+#define CR2_RXNEIE         6
+#define CR2_TXEIE          7
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* 01_MCAL_08_SPI_SPI_PRIVATE_H_ */

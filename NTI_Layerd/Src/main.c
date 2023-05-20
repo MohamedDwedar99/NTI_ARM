@@ -7,24 +7,39 @@
 
 #include	"NVIC_interface.h"
 #include    "EXTI_interface.h"
-
+#include    "USART_interface.h"
 #include    "LED_interface.h"
-#include    "BUZZER_interface.h"
-#include    "ADC_interface.h"
+#include    "SPI_interface.h"
+#include    "I2C_Interface.h"
 
 int main (void)
 {
-	RCC_voidSysClkInt();
+    RCC_voidSysClkInt();
 	RCC_voidEnablePerClk(RCC_APB2, 2);
-	RCC_voidEnablePerClk(RCC_APB2, 9);
-	DIO_voidSetPinDirection(PORTA, PIN0, GPIO_INPUT_ANALOG);
-	ADC_voidInit();
-	u16 volatile read = 0;
+	RCC_voidEnablePerClk(RCC_APB2, 3);
+	RCC_voidEnablePerClk(RCC_APB2, 4);
+	RCC_voidEnablePerClk(RCC_APB2, 0);
+	RCC_voidEnablePerClk(RCC_APB1, 21);
+	DIO_voidSetPinDirection(PORTB, PIN6, GPIO_OUTPUT_10MHZ_AFOD);
+	DIO_voidSetPinDirection(PORTB, PIN7, GPIO_OUTPUT_10MHZ_AFOD);
+	I2C1_voidMasterInit();
+	// write A to eeprom
+	I2C1_voidStart();
+	I2C1_voidSendAddress(10100100);
+	I2C1_voidSendAddress(00000001);
+	I2C1_voidSendData('A');
+	I2C1_voidStop();
+	int readI2C = '\0';
 	while (1)
 	{
-		read = ADC_u16_read(CHANNEL_0);
-		f32 x = (f32)read/4096*3.3;
-		asm("NOP");
+		//read from eeprom
+		I2C1_voidStart();
+		I2C1_voidSendAddress(10100100);
+		I2C1_voidSendAddress(00000001);
+		I2C1_voidStart();
+		I2C1_voidSendAddress(10100100);
+		readI2C = I2C1_voidRecieveData();
+		I2C1_voidStop();
 	}
 	return 1;
 }

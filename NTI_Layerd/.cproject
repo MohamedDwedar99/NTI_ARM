@@ -48,14 +48,15 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/02 NVIC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/02 ECU/LED}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/02 ECU/Segment7}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/EXTI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/03 EXTI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/STK}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/05 DMA}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/04 STK}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/06 ADC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/Debug/COTS/02 ECU/LED}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/02 ECU/BUZZER}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/07 USART}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/08 SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/09 I2C}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1998698726" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -100,14 +101,15 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/02 NVIC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/02 ECU/LED}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/02 ECU/Segment7}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/EXTI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/03 EXTI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/STK}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/05 DMA}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/04 STK}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/06 ADC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/Debug/COTS/02 ECU/LED}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/02 ECU/BUZZER}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/07 USART}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/08 SPI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/NTI_Layerd/COTS/01 MCAL/09 I2C}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.851076902" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -166,9 +168,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="01 MCAL/04 STK/STK_program.c|01 MCAL/04 STK/SingleInterval_main.c|01 MCAL/04 STK/BusyWait_main.c|01 MCAL/04 STK/PeriodicInterval_main.c|01 MCAL/STK/BusyWait_main.c|01 MCAL/STK/PeriodicInterval_main.c|01 MCAL/STK/SingleInterval_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="COTS"/>
+						<entry excluding="01 MCAL/STK/BusyWait_main.c|01 MCAL/04 STK/SingleInterval_main.c|01 MCAL/STK/PeriodicInterval_main.c|01 MCAL/04 STK/STK_program.c|01 MCAL/STK/SingleInterval_main.c|01 MCAL/04 STK/BusyWait_main.c|01 MCAL/04 STK/PeriodicInterval_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="COTS"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
-						<entry excluding="main_LevelSensor.c|DMA1_main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+						<entry excluding="main_SPI.c|main_LevelSensor.c|DMA1_main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Startup"/>
 					</sourceEntries>
 				</configuration>
@@ -240,7 +242,7 @@
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="COTS/01 MCAL/03 EXTI"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
-						<entry excluding="main_LevelSensor.c|DMA1_main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+						<entry excluding="main_SPI.c|main_LevelSensor.c|DMA1_main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Startup"/>
 					</sourceEntries>
 				</configuration>

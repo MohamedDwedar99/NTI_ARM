@@ -1,0 +1,3 @@
+../COTS/01 MCAL/08 SPI/SPI_program.c:15:6:SPI1_voidInit	4	static,ignoring_inline_asm
+../COTS/01 MCAL/08 SPI/SPI_program.c:41:6:SPI_voidMasterSend	16	static,ignoring_inline_asm
+../COTS/01 MCAL/08 SPI/SPI_program.c:49:6:SPI_voidMasterRecieve	16	static,ignoring_inline_asm

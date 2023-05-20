@@ -1,0 +1,29 @@
+/*
+ * SPI_program.c
+ *
+ *  Created on: May 18, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#include "Std_Types.h"
+#include "Bit_Math.h"
+
+#include "SPI_interface.h"
+#include "SPI_config.h"
+#include "SPI_private.h"
+
+void SPI1_voidInit(void)
+{
+	// Select Clock Phase
+	SPI1 ->
+	// Select Clock Polarity
+	// Master Slave Select
+	// Baud Rate Select
+	// 8Bit data
+	// Enable Slave Select
+	// Enable SPI
+}
+u8   SPI1_u8TxRxChar(u8 data)
+{
+
+}

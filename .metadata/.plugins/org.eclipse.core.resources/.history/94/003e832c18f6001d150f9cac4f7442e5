@@ -1,0 +1,40 @@
+/*
+ * SPI_program.c
+ *
+ *  Created on: May 18, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#include "Std_Types.h"
+#include "Bit_Math.h"
+
+#include "SPI_interface.h"
+#include "SPI_config.h"
+#include "SPI_private.h"
+
+void SPI1_voidInit(void)
+{
+//	SPI1 -> CR1 |= 0b1000000;
+	// Select Clock Phase (default first clock transmit)
+	// Select Clock Polarity (default 0 in idle)
+	// Master Slave Select
+#if M_S == MASTER
+	SPI1 -> CR1 |= (1 << CR1_MSTR);
+#endif
+	// Baud Rate Select
+	SPI1 -> CR1 |= (BAUD_RATE << CR1_BR);
+	// 8Bit data
+	SPI1 -> CR1 |= (DATA_LEN << CR1_DFF);
+	// Enable Slave Select
+	// Enable SPI
+
+	asm("NOP");
+}
+u8   SPI1_u8TxRxChar(u8 data)
+{
+	u8 rx_data=0;
+	SPI1->DR = data;
+	while (GET_BIT(SPI1 -> SR, SR_BSY));
+	rx_data = SPI1 -> DR;
+	return rx_data;
+}

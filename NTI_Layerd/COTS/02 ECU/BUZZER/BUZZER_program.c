@@ -10,7 +10,7 @@
 
 #include "DIO_interface.h"
 
-#include "BUZZER_interface.h"
+#include "../../02 ECU/BUZZER/BUZZER_interface.h"
 
 
 void BUZZER_voidInit(u8 port,u8 pin)

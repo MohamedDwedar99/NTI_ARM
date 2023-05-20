@@ -1,0 +1,4 @@
+Segment7_program.c:17:6:Segment7_voidInit	2
+Segment7_program.c:26:6:Segment7_voidSetValue	2
+Segment7_program.c:33:6:Segment7_voidDisplayON	1
+Segment7_program.c:37:6:Segment7_voidDisplayOFF	1

@@ -1,0 +1,78 @@
+#include	"Std_Types.h"
+#include	"Bit_Math.h"
+#include    "Delay_interface.h"
+
+#include	"RCC_interface.h"
+#include	"DIO_interface.h"
+
+#include	"NVIC_interface.h"
+#include    "EXTI_interface.h"
+
+#include    "LED_interface.h"
+#include    "BUZZER_interface.h"
+#include    "ADC_interface.h"
+
+int main (void)
+{
+	RCC_voidSysClkInt();
+	RCC_voidEnablePerClk(RCC_APB2, 2);
+	RCC_voidEnablePerClk(RCC_APB2, 9);
+	DIO_voidSetPinDirection(PORTA, PIN0, GPIO_INPUT_ANALOG);
+	ADC_voidInit();
+	u16 volatile read = 0;
+	LED_voidInit(PORTA, PIN1);
+	LED_voidInit(PORTA, PIN2);
+	LED_voidInit(PORTA, PIN3);
+
+	while (1)
+	{
+		read = ADC_u16_read(CHANNEL_0);
+		f32 x = (f32)read/4096*3.3;
+		asm("NOP");
+		if ( x <= 3.3 && x >= 3)
+		{
+			LED_voidON(PORTA, PIN1);
+			LED_voidON(PORTA, PIN2);
+			LED_voidON(PORTA, PIN3);
+		}
+		else if ( x < 3 && x >= 2)
+		{
+			LED_voidON(PORTA, PIN1);
+			LED_voidON(PORTA, PIN2);
+			LED_voidOFF(PORTA, PIN3);
+		}
+		else if ( x < 2 && x >= 1)
+		{
+			LED_voidON(PORTA, PIN1);
+			LED_voidOFF(PORTA, PIN2);
+			LED_voidOFF(PORTA, PIN3);
+		}
+		else
+		{
+			LED_voidOFF(PORTA, PIN1);
+			LED_voidOFF(PORTA, PIN2);
+			LED_voidOFF(PORTA, PIN3);
+		}
+	}
+	return 1;
+}
+
+//void	EXTI0_IRQHandler(void)
+//{
+//	//EXTI0_CallBack();
+//	/*		Led On		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_HIGH);
+//			_delay_ms(1000);
+//			/*		Led Off		*/
+//			DIO_voidSetPinValue(PORTA,PIN1,GPIO_LOW);
+//			_delay_ms(1000);
+//	/*	Clear EXTI0 Flag	*/
+//	//SET_BIT(EXTI -> PR,0);
+//}
+
+
+
+
+
+
+

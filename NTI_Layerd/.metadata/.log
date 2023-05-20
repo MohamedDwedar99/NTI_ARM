@@ -1,0 +1,71 @@
+!SESSION 2023-05-17 19:35:33.854 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-17 19:35:54.046
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-17 19:35:54.067
+!MESSAGE Log4j2 initialized with config file E:\NTI_Layerd\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-17 19:35:56.809
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-05-17 19:37:36.568 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  E:\NTI_Layerd\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 E:\NTI_Layerd\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-17 19:37:46.473
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-17 19:37:46.474
+!MESSAGE Log4j2 initialized with config file E:\NTI_Layerd\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-17 19:37:49.794
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-05-17 19:38:01.026 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  E:\NTI_Layerd\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 E:\NTI_Layerd\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-17 19:38:11.078
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-17 19:38:11.079
+!MESSAGE Log4j2 initialized with config file E:\NTI_Layerd\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-17 19:38:13.795
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-17 20:05:22.697
+!MESSAGE Indexed 'NTI_Layerd' (11 sources, 27 headers) in 1.91 sec: 297 declarations; 925 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2023-05-17 20:08:01.277 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-17 20:08:17.911
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-17 20:08:17.911
+!MESSAGE Log4j2 initialized with config file E:\NTI_Layerd\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-17 20:08:22.651
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-17 22:53:33.740
+!MESSAGE Indexed 'NTI_Layerd' (11 sources, 27 headers) in 0.242 sec: 297 declarations; 925 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-17 23:06:17.929
+!MESSAGE Indexed 'NTI_Layerd' (11 sources, 28 headers) in 0.116 sec: 308 declarations; 935 references; 0 unresolved inclusions; 2 syntax errors; 0 unresolved names (0%)

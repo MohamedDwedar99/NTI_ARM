@@ -1,0 +1,25 @@
+/*
+ * I2C_private.h
+ *
+ *  Created on: May 17, 2023
+ *      Author: Mohamed Dwedar
+ */
+
+#ifndef I2C_PRIVATE_H_
+#define I2C_PRIVATE_H_
+
+typedef struct{
+	u8 CR1;
+	u8 CR2;
+	u8 OAR1;
+	u8 ORA2;
+	u8 DR;
+	u8 SR1;
+	u8 SR2;
+	u8 CCR;
+	u8 TRISE;
+}I2C_type;
+
+#define I2C1          ((volatile u32 *)(0x40005400))
+
+#endif /* 01_MCAL_09_I2C_I2C_PRIVATE_H_ */

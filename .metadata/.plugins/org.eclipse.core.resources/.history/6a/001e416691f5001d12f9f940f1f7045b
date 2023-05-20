@@ -1,0 +1,13 @@
+/*
+ * SPI_interface.h
+ *
+ *  Created on: May 18, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef SPI_INTERFACE_H_
+#define SPI_INTERFACE_H_
+
+
+
+#endif /* 01_MCAL_08_SPI_SPI_INTERFACE_H_ */
