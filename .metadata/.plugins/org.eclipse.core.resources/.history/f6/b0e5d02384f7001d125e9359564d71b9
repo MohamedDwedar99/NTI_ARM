@@ -1,0 +1,13 @@
+/*
+ * DC_MOTOR_interface.h
+ *
+ *  Created on: May 21, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+
+#ifndef 02_ECU_DC_MOTOR_DC_MOTOR_INTERFACE_H_
+#define 02_ECU_DC_MOTOR_DC_MOTOR_INTERFACE_H_
+
+
+
+#endif /* 02_ECU_DC_MOTOR_DC_MOTOR_INTERFACE_H_ */

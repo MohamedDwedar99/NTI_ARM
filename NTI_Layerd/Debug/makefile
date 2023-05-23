@@ -11,11 +11,13 @@ RM := rm -rf
 -include sources.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
+-include COTS/RTOS/subdir.mk
 -include COTS/02\ ECU/Segment7/subdir.mk
 -include COTS/02\ ECU/PROXIMITY/subdir.mk
 -include COTS/02\ ECU/LED/subdir.mk
 -include COTS/02\ ECU/LCD/subdir.mk
 -include COTS/02\ ECU/KEYPAD/subdir.mk
+-include COTS/02\ ECU/DC_MOTOR/subdir.mk
 -include COTS/02\ ECU/BUZZER/subdir.mk
 -include COTS/01\ MCAL/09\ I2C/subdir.mk
 -include COTS/01\ MCAL/08\ SPI/subdir.mk
@@ -23,7 +25,6 @@ RM := rm -rf
 -include COTS/01\ MCAL/06\ ADC/subdir.mk
 -include COTS/01\ MCAL/05\ DMA/subdir.mk
 -include COTS/01\ MCAL/04\ STK/subdir.mk
--include COTS/01\ MCAL/03\ EXTI/subdir.mk
 -include COTS/01\ MCAL/02\ NVIC/subdir.mk
 -include COTS/01\ MCAL/01\ GPIO/subdir.mk
 -include COTS/01\ MCAL/00\ RCC/subdir.mk

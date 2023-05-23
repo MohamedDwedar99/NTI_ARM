@@ -26,47 +26,107 @@ void	DMA1_voidChannelInit(u8 Channel_copy,u8 source,u8 sink)
 	case DMA_Memory:
 		if (sink == DMA_Memory)
 		{
+			// Choose the Priority
 		    DMA1 -> Channel[Channel_copy].CCR |= (DMA_VERYHIGH << PL);
+		    // Source size
 		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << MSIZE);
+		    // Sink size
 		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << PSIZE);
+		    // source incerment mode
 		    DMA1 -> Channel[Channel_copy].CCR |= 1 << MINC;
+		    // sink incerment mode
 		    DMA1 -> Channel[Channel_copy].CCR |= 1 << PINC;
+		    // Transfer Error interrupt enable
 		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TEIE;
+		    // Half Transfer interrupt enable
 		    DMA1 -> Channel[Channel_copy].CCR |= 1 << HTIE;
+		    // Transfer complete interrupt enable
 		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TCIE;
-		    DMA1 -> Channel[Channel_copy].CCR |= 1 << EN; // m to m
+		    // Enable DMA
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << EN;
 		}
 		else if (sink == DMA_Peripheral)
 		{
-
+			// Choose the Priority
+		    DMA1 -> Channel[Channel_copy].CCR |= (DMA_VERYHIGH << PL);
+		    // Source size
+		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << MSIZE);
+		    // Sink size
+		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << PSIZE);
+		    // source incerment mode
+		    //DMA1 -> Channel[Channel_copy].CCR |= 1 << MINC;
+		    // sink incerment mode
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << PINC;
+		    // Transfer Error interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TEIE;
+		    // Half Transfer interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << HTIE;
+		    // Transfer complete interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TCIE;
+		    // Enable DMA
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << EN;
 		}
 		break;
 	case DMA_Peripheral:
 		if (sink == DMA_Memory)
 		{
-
+			// Choose the Priority
+		    DMA1 -> Channel[Channel_copy].CCR |= (DMA_VERYHIGH << PL);
+		    // Source size
+		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << MSIZE);
+		    // Sink size
+		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << PSIZE);
+		    // source incerment mode
+		    //DMA1 -> Channel[Channel_copy].CCR |= 1 << MINC;
+		    // sink incerment mode
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << PINC;
+		    // Transfer Error interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TEIE;
+		    // Half Transfer interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << HTIE;
+		    // Transfer complete interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TCIE;
+		    // Enable DMA
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << EN;
 		}
 		else if (sink == DMA_Peripheral)
 		{
-
+			// Choose the Priority
+		    DMA1 -> Channel[Channel_copy].CCR |= (DMA_VERYHIGH << PL);
+		    // Source size
+		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << MSIZE);
+		    // Sink size
+		    DMA1 -> Channel[Channel_copy].CCR |= (SIZE_32BIT   << PSIZE);
+		    // source incerment mode
+		   // DMA1 -> Channel[Channel_copy].CCR |= 1 << MINC;
+		    // sink incerment mode
+		   // DMA1 -> Channel[Channel_copy].CCR |= 1 << PINC;
+		    // Transfer Error interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TEIE;
+		    // Half Transfer interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << HTIE;
+		    // Transfer complete interrupt enable
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << TCIE;
+		    // Enable DMA
+		    DMA1 -> Channel[Channel_copy].CCR |= 1 << EN;
 		}
 		break;
 	}
 }
 
-void	DMA1_voidStartChannel(u32 * SrcAdd,u32 * DestAdd,u16 BlockLength)
+void	DMA1_voidStartChannel(u8 Channel_copy, u32 * SrcAdd,u32 * DestAdd,u16 BlockLength)
 {
 	/*		Make Sure that the channel is  disabled */
-	CLR_BIT(DMA1 -> Channel[0].CCR,0);
+	CLR_BIT(DMA1 -> Channel[Channel_copy].CCR,0);
 	
-	DMA1 -> Channel[0].CPAR	=	SrcAdd;
-	DMA1 -> Channel[0].CMAR	=	DestAdd;
+	DMA1 -> Channel[Channel_copy].CPAR	=	SrcAdd;
+	DMA1 -> Channel[Channel_copy].CMAR	=	DestAdd;
 	
 	/*	Load the Block Length				*/
-	DMA1 -> Channel[0].CNDTR	=	BlockLength;
+	DMA1 -> Channel[Channel_copy].CNDTR	=	BlockLength;
 
 	/*		Make Sure that the channel is  Enabled to strat transfere*/
-	SET_BIT(DMA1 -> Channel[0].CCR,0);	
+	SET_BIT(DMA1 -> Channel[Channel_copy].CCR,0);
 }
 
 

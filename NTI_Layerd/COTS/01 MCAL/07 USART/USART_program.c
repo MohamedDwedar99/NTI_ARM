@@ -60,7 +60,7 @@ u32 UART_RXdata (void) {
 //	while(!get_bit(UCSRA ,UCSRA_RXC)) ;
 //	*data = UDR ;
 	u32 data = 0;
-	while (!GET_BIT(USART1 -> SR , 5));
+	while (GET_BIT(USART1 -> SR , 5));
 	data = USART1 -> DR; ;
 	return data;
 }
@@ -76,8 +76,8 @@ void UART1_voidSendString(u8 * const str)
 }
 u8 * const UART1_StrReceiveString(void)
 {
-	u16 buffer = 0;
-	u16 static data[30];
+	u8 buffer = 0;
+	u8 static data[30];
 	while (data[buffer] != '\0')
 	{
 		data[buffer] = UART_RXdata();

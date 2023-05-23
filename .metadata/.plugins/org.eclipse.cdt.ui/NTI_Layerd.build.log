@@ -1,10 +1,27 @@
-20:30:32 **** Incremental Build of configuration Debug for project NTI_Layerd ****
+05:50:49 **** Incremental Build of configuration Debug for project NTI_Layerd ****
 make -j4 all 
+arm-none-eabi-gcc "../COTS/01 MCAL/05 DMA/DMA_program.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/01 GPIO" -I"E:/NTI/STM32/NTI_Layerd/COTS/00 LIB" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/00 RCC" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/02 NVIC" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/Segment7" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/03 EXTI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/05 DMA" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/04 STK" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/06 ADC" -I"E:/NTI/STM32/NTI_Layerd/Debug/COTS/02 ECU/LED" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/BUZZER" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/07 USART" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/08 SPI" -I"E:/NTI/STM32/NTI_Layerd/COTS/01 MCAL/09 I2C" -I"E:/NTI/STM32/NTI_Layerd/COTS/02 ECU/DC_MOTOR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"COTS/01 MCAL/05 DMA/DMA_program.d" -MT"COTS/01 MCAL/05 DMA/DMA_program.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "COTS/01 MCAL/05 DMA/DMA_program.o"
+../COTS/01 MCAL/05 DMA/DMA_program.c: In function 'DMA1_voidStartChannel':
+../COTS/01 MCAL/05 DMA/DMA_program.c:122:37: warning: assignment to 'u32' {aka 'volatile unsigned int'} from 'u32 *' {aka 'unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+  122 |  DMA1 -> Channel[Channel_copy].CPAR = SrcAdd;
+      |                                     ^
+../COTS/01 MCAL/05 DMA/DMA_program.c:123:37: warning: assignment to 'u32' {aka 'volatile unsigned int'} from 'u32 *' {aka 'unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+  123 |  DMA1 -> Channel[Channel_copy].CMAR = DestAdd;
+      |                                     ^
+arm-none-eabi-gcc -o "NTI_Layerd.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\NTI\STM32\NTI_Layerd\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NTI_Layerd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NTI_Layerd.elf
+ 
 arm-none-eabi-size   NTI_Layerd.elf 
+arm-none-eabi-objdump -h -S  NTI_Layerd.elf  > "NTI_Layerd.list"
+arm-none-eabi-objcopy  -O ihex  NTI_Layerd.elf  "NTI_Layerd.hex"
    text	   data	    bss	    dec	    hex	filename
-   1956	      8	   1568	   3532	    dcc	NTI_Layerd.elf
+   2340	      8	   1568	   3916	    f4c	NTI_Layerd.elf
 Finished building: default.size.stdout
  
+Finished building: NTI_Layerd.hex
+ 
+Finished building: NTI_Layerd.list
+ 
 
-20:30:32 Build Finished. 0 errors, 0 warnings. (took 371ms)
+05:50:52 Build Finished. 0 errors, 2 warnings. (took 3s.225ms)
 

@@ -31,7 +31,7 @@ void ADC_voidInit(void)
 
 	ADC1 -> CR2 |= 1 << EXTTRIG;
 
-	//AD Cal
+	//AD Calibration
 	ADC1 -> CR2 |= 1 << 2;
 	while (GET_BIT(ADC1 -> CR2 , 2));
 
@@ -41,15 +41,12 @@ void ADC_voidInit(void)
 
 u32   ADC_u16_read(u32 channed)
 {
- u32 Local_u32Reading;   //	ADC->DR &= 0x00000000;
+ u32 Local_u32Reading = ~0;   //	ADC->DR &= 0x00000000;
 // Set Channel
 	if(channed <= CHANNEL_9)
 	{
-		CLR_BIT(ADC1->SQR3 , 0);
-		CLR_BIT(ADC1->SQR3 , 1);
-		CLR_BIT(ADC1->SQR3 , 2);
-		CLR_BIT(ADC1->SQR3 , 3);
-		CLR_BIT(ADC1->SQR3 , 4);
+		ADC1 -> SQR3 &= ~11111;
+		ADC1 -> SQR3 |= channed;
 	}
 
 	ADC1 -> CR2 |= 1 << 22;

@@ -1,4 +1,5 @@
-
+#ifndef STK_PRIVATE_H
+#define STK_PRIVATE_H
 
 #define		STK_AHB_DIV_8			0
 #define		STK_AHB					1
@@ -16,3 +17,6 @@ typedef struct
 }STK_Type;
 
 #define			STK		((volatile STK_Type *)(0xE000E010))
+
+
+#endif

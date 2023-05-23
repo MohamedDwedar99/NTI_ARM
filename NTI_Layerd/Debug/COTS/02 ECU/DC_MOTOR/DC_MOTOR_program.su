@@ -1,0 +1,4 @@
+../COTS/02 ECU/DC_MOTOR/DC_MOTOR_program.c:16:6:DC_MOTOR_voidInit	8	static
+../COTS/02 ECU/DC_MOTOR/DC_MOTOR_program.c:21:6:DC_MOTOR_voidCW	8	static
+../COTS/02 ECU/DC_MOTOR/DC_MOTOR_program.c:26:6:DC_MOTOR_voidCCW	8	static
+../COTS/02 ECU/DC_MOTOR/DC_MOTOR_program.c:31:6:DC_MOTOR_voidStop	8	static

@@ -1,0 +1,4 @@
+DC_MOTOR_program.c:16:6:DC_MOTOR_voidInit	1
+DC_MOTOR_program.c:21:6:DC_MOTOR_voidCW	1
+DC_MOTOR_program.c:26:6:DC_MOTOR_voidCCW	1
+DC_MOTOR_program.c:31:6:DC_MOTOR_voidStop	1

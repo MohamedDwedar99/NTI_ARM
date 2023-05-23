@@ -110,8 +110,6 @@ void		NVIC_voidSetSwIntPriority(u8 IntNum , u8 priority)
 	{
 		NVIC_IPR[IntNum] = (priority << 4 );
 	}
-
-
 }
 
 

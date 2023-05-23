@@ -1,0 +1,31 @@
+/*
+ * DC_MOTOR_program.c
+ *
+ *  Created on: May 21, 2023
+ *      Author: es-MohamedHAbdelAziz
+ */
+#include "Bit_Math.h"
+#include "Std_Types.h"
+
+#include "DC_MOTOR_config.h"
+#include "DC_MOTOR_interface.h"
+#include "DC_MOTOR_private.h"
+
+#include "DIO_interface.h"
+
+void DC_MOTOR_voidInit(void)
+{
+
+}
+void DC_MOTOR_voidCW(void)
+{
+
+}
+void DC_MOTOR_voidCCW(void)
+{
+
+}
+void DC_MOTOR_voidStop(void)
+{
+
+}

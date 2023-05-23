@@ -7550,3 +7550,11 @@ Reason: (2) ST-LINK DLL error.
 !SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2023-05-20 20:30:36.260
 !MESSAGE Error in initializing ST-LINK device.
 Reason: (2) ST-LINK DLL error.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-21 04:21:21.721
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@14e1e6e8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-05-21 04:21:21.721
+!MESSAGE Suspend operation timeout.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-21 05:04:29.309
+!MESSAGE Indexed 'NTI_Layerd' (17 sources, 36 headers) in 0.685 sec: 409 declarations; 1,393 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

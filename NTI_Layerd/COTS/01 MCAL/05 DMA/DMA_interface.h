@@ -30,6 +30,6 @@
 #define SIZE_32BIT                 2
 
 void	DMA1_voidChannelInit(u8 Channel_copy,u8 source,u8 sink);
-void	DMA1_voidStartChannel(u32 * SrcAdd,u32 * DestAdd,u16 BlockLength);
+void	DMA1_voidStartChannel(u8 Channel_copy, u32 * SrcAdd,u32 * DestAdd,u16 BlockLength);
 
 #endif /* 01_MCAL_05_DMA_DMA_CONFIG_H_ */

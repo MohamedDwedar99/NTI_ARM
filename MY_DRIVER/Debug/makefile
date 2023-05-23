@@ -18,6 +18,7 @@ RM := rm -rf
 -include COTS/02ECU/KEYPAD/subdir.mk
 -include COTS/02ECU/BUZZER/subdir.mk
 -include COTS/01MCAL/Delay/subdir.mk
+-include COTS/01MCAL/09\ I2C/subdir.mk
 -include COTS/01MCAL/02NVIC/subdir.mk
 -include COTS/01MCAL/01GPIO/subdir.mk
 -include COTS/01MCAL/00RCC/subdir.mk
