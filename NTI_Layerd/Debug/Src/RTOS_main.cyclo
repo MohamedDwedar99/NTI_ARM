@@ -1,0 +1,4 @@
+RTOS_main.c:23:5:main	1
+RTOS_main.c:42:6:task1	1
+RTOS_main.c:46:6:task2	1
+RTOS_main.c:50:6:task3	1

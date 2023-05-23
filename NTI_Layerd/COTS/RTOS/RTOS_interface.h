@@ -13,14 +13,20 @@ typedef struct {
 	u16 priodicity;
 	void (*func_Task)(void);
 	u8 state;
+	u16 firstdelay;
 }task_st;
 
 typedef enum {
-	passive,
-	active
+	susbend,
+	ready
 }task_state;
 
-void RTOS_CreateTask(u8 priority,u16 priodicity,void (*func_Task)(void));
-void RTOS_Scheduler(u8 task_prioity,u8 state);
+void RTOS_CreateTask(u8 priority,u16 priodicity,void (*func_Task)(void),u8 first_delay);
+void RTOS_Scheduler(void);
 void RTOS_Start(void);
+void Task_Susbend(u8 priority);
+void Task_Resume(u8 priority);
+void Task_Delete(u8 priority);
+
+
 #endif /* RTOS_RTOS_INTERFACE_H_ */

@@ -1,3 +1,6 @@
-../COTS/RTOS/RTOS_program.c:13:6:RTOS_CreateTask	16	static
-../COTS/RTOS/RTOS_program.c:19:6:RTOS_Scheduler	16	static
-../COTS/RTOS/RTOS_program.c:23:6:RTOS_Start	16	static
+../COTS/RTOS/RTOS_program.c:17:6:RTOS_CreateTask	16	static
+../COTS/RTOS/RTOS_program.c:26:6:RTOS_Scheduler	16	static
+../COTS/RTOS/RTOS_program.c:62:6:RTOS_Start	8	static
+../COTS/RTOS/RTOS_program.c:68:6:Task_Susbend	16	static
+../COTS/RTOS/RTOS_program.c:72:6:Task_Resume	16	static
+../COTS/RTOS/RTOS_program.c:76:6:Task_Delete	16	static

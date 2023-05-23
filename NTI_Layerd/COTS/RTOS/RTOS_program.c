@@ -8,24 +8,72 @@
 #include "Std_Types.h"
 #include "Bit_Math.h"
 #include "RTOS_interface.h"
-task_st new_task[20] ={0};
+#include "STK_interface.h"
+#include "Delay_interface.h"
 
-void RTOS_CreateTask(u8 priority,u16 priodicity,void (*func_Task)(void))
+task_st task[20] ={0};
+u8 tick = 0;
+
+void RTOS_CreateTask(u8 priority,u16 priodicity,void (*func_Task)(void),u8 first_delay)
 {
-	new_task[priority].priodicity = priodicity;
-	new_task[priority].func_Task = func_Task;
-	new_task[priority].state = passive;
+	task[priority].priodicity = priodicity;
+	task[priority].func_Task = func_Task;
+	task[priority].state = ready;
+	task[priority].firstdelay = first_delay;
+
 }
-void RTOS_Scheduler(u8 priority,task_state state)
+
+void RTOS_Scheduler(void)
 {
-	new_task[priority].state = state;
+	for (int i =0; i < 3;i++)
+	{
+		if (task[i].state == susbend)
+		{
+			continue;
+		}
+		if (task[i].firstdelay == 0)
+		{
+			task[i].func_Task();
+			task[i].firstdelay = task[i].priodicity - 1;
+		}
+		else
+		{
+			task[i].firstdelay--;
+		}
+	}
+
+	/* for loop to check on every TCB */
+//	u8 counter;
+//	for(counter = 0; counter < 3 ; counter++)
+//	{
+//		if(task[counter].firstdelay == 0)
+//		{
+//			//Call function
+//			task[counter].func_Task();
+//			//Periodicity => firstdelay
+//			task[counter].firstdelay = task[counter].priodicity - 1;
+//		}
+//		else
+//		{
+//			task[counter].firstdelay--;
+//		}
+//	}
 }
 void RTOS_Start(void)
 {
-	u8 i = 0;
-	while (new_task[i].func_Task != 0 && (new_task[i].state == active )&&i < 20 )
-	{
-		new_task[i].func_Task();
-		STK_voidSetBusyWait(new_task[i].priodicity);
-	}
+	RTOS_Scheduler();
+	STK_voidSetBusyWait(1000000);
+}
+
+void Task_Susbend(u8 priority)
+{
+	task[priority].state = susbend;
+}
+void Task_Resume(u8 priority)
+{
+	task[priority].state = ready;
+}
+void Task_Delete(u8 priority)
+{
+	task[priority].state = 0;
 }

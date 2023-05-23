@@ -1,3 +1,4 @@
 ../COTS/02 ECU/LED/LED_program.c:16:6:LED_voidInit	16	static
 ../COTS/02 ECU/LED/LED_program.c:20:6:LED_voidON	16	static
 ../COTS/02 ECU/LED/LED_program.c:24:6:LED_voidOFF	16	static
+../COTS/02 ECU/LED/LED_program.c:29:6:LED_voidToggle	16	static

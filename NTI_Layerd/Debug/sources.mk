@@ -28,6 +28,7 @@ COTS/.metadata/.plugins/org.eclipse.cdt.managedbuilder.core \
 COTS/01\ MCAL/00\ RCC \
 COTS/01\ MCAL/01\ GPIO \
 COTS/01\ MCAL/02\ NVIC \
+COTS/01\ MCAL/03\ EXTI \
 COTS/01\ MCAL/04\ STK \
 COTS/01\ MCAL/05\ DMA \
 COTS/01\ MCAL/06\ ADC \

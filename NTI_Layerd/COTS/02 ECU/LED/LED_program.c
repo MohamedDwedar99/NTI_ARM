@@ -25,3 +25,8 @@ void LED_voidOFF(u8 port,u8 pin)
 {
 	DIO_voidSetPinValue(port, pin, GPIO_LOW);
 }
+
+void LED_voidToggle(u8 port,u8 pin)
+{
+	DIO_voidTogPinValue(port, pin);
+}

@@ -1,3 +1,6 @@
-RTOS_program.c:13:6:RTOS_CreateTask	1
-RTOS_program.c:19:6:RTOS_Scheduler	1
-RTOS_program.c:23:6:RTOS_Start	4
+RTOS_program.c:17:6:RTOS_CreateTask	1
+RTOS_program.c:26:6:RTOS_Scheduler	4
+RTOS_program.c:62:6:RTOS_Start	1
+RTOS_program.c:68:6:Task_Susbend	1
+RTOS_program.c:72:6:Task_Resume	1
+RTOS_program.c:76:6:Task_Delete	1

@@ -25,6 +25,7 @@ RM := rm -rf
 -include COTS/01\ MCAL/06\ ADC/subdir.mk
 -include COTS/01\ MCAL/05\ DMA/subdir.mk
 -include COTS/01\ MCAL/04\ STK/subdir.mk
+-include COTS/01\ MCAL/03\ EXTI/subdir.mk
 -include COTS/01\ MCAL/02\ NVIC/subdir.mk
 -include COTS/01\ MCAL/01\ GPIO/subdir.mk
 -include COTS/01\ MCAL/00\ RCC/subdir.mk
