@@ -2,7 +2,7 @@
 #define STK_PRIVATE_H
 
 #define		STK_AHB_DIV_8			0
-#define		STK_AHB					1
+#define		STK_AHB				1
 
 #define		STK_SINGLE_INTERVAL		0
 #define		STK_PERIOD_INTERVAL		1
